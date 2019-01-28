@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* mobile first ----------------------------------------- */
+
+.base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
+.header-wrap{width:100%; margin:0 auto; position:relative;}
+.header-wrap .logo{position:absolute; left:15px; top:19px; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
+
+.gnb-wrap{display:none;}
+
+
+.base-body{margin-top:50px; width:100%}
+.base-main{width:100%;}
+
+/* main */
+.main-wrap{width:100%; overflow:hidden;}
+.main-visual{float:left; width:100%;}
+.main-pof,
+.main-img{float:left; width:33.3333%}
+.main-pof img,
+.main-img img{width:100%; display:block;}
+.main-pof a,
+.main-img a{display:block;}
+
+.main-pof.col-2{width:66.6667%}
+.main-news{position:relative; float:left; min-width:33.3334%; padding-bottom:33.3333%; background:#3d47da}
+.main-news h3{position: absolute; color:#fff;}
+
+.main-visual .owl-nav,
+.main-visual .owl-dots{position: absolute;}
