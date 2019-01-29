@@ -10,10 +10,15 @@
 /* handset */ 
 @media all and (max-width:599px) and (orientation:portrait) {
     body:after{content:"handset"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
+
+    
 }
 /* small handset */ 
 @media all and (max-width:359px) {
     body:after{content:"small handset"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
+
+    .main-news .owl-carousel{padding-top:35px}
+    .main-news .owl-carousel a{font-size:10px; font-weight:500; line-height: 15px; }
 }
 /* small handset landscape */ 
 @media all and (max-width:599px) and (orientation:landscape) { 
@@ -36,6 +41,11 @@
 @media all and (min-width:960px) and (max-width:1439px) and (orientation:landscape) {
     body:after{content:"tablet landscape"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
 
+    .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: center; color:#fff; font-size:14px; line-height:20px; }
+    .footer-wrap{width:100%; max-width:1400px; margin:0 auto; overflow: hidden}
+    .base-footer address{font-style:normal; letter-spacing:1px; font-weight: 200;}
+    .base-footer address b{font-weight: 600}
+    .footer-copy{font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px; font-size:12px}
 
     .base-header{min-height:190px; transition:min-height 0.2s}
     .header-wrap{width:100%; max-width:1400px}
@@ -44,22 +54,22 @@
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s}
     .gnb-dep1{width:100%; text-align:center;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
-    .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
+    .gnb-dep1 > li > a{display:block; padding:0 25px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
     .gnb-dep2{display:none;}
+    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;}
+    .util-menu a{display:block; float:left}
+    .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
+    .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
     .base-body{margin-top:190px;}
 
-    .type-mini .base-header{min-height:100px; box-shadow:0 0 10px rgba(0,0,0,0.1)}
-    .type-mini .header-wrap .logo{top:30px;}
-    .type-mini .gnb-wrap{top:30px}
-    .type-mini .gnb-dep1 > li > a{padding:0 30px; font-weight: 400}
-    .type-mini .gnb-dep1 > li.n3{margin-right:320px}
-    .type-mini .gnb-dep1 > li.n4{left:70px}
-    .type-mini .gnb-dep1 > li.n5{left:70px;}
-    .type-mini .gnb-dep1 > li.n5 a{ padding:0 20px}
-    .type-mini .gnb-dep1 > li.n6{left:70px}
+    .type-mini .base-header{min-height:50px; }
+    .type-mini .header-wrap .logo{top:18px; left:30px; margin-left:0; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
+    .type-mini .gnb-wrap{top:12px; right:100px; width:auto}
+    .type-mini .gnb-dep1 > li > a{padding:0 17px; font-weight: 400; font-size:16px; }
+    .type-mini .util-menu{top:8px}
 
     /* main */
     .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; overflow:hidden;}
@@ -70,11 +80,25 @@
     .main-img img{width:100%; display:block;}
     .main-pof a,
     .main-img a{display:block;}
-
+    .main-row{float: none;}
     .main-pof.col-2{width:50%}
-    .main-news{position:relative; float:left; min-width:25%; padding-bottom:25%; background:#3d47da}
-    .main-news h3{position: absolute; color:#fff;}
+    .main-news{position:relative; float:left; min-width:25%; max-width:25%; padding-bottom:25%; background:#3d47da}
+    .main-client{position:relative; float:left; min-width:25%; max-width:25%; padding-bottom:25%; background:#fff}
 
+    .main-news .owl-carousel .owl-dot{background:#fff !important}
+    .main-news .owl-carousel .owl-dots{display:block}
+    .main-square .owl-carousel .owl-dots{position: absolute; bottom:30px; width:100%; text-align: center}
+    .main-square .owl-carousel .owl-dot{width:8px; height:8px; border-radius:4px; background:#000; opacity:0.3; margin:0 6px}
+    .main-square .owl-carousel .owl-dot.active{opacity:1}
+
+    .main-square h3{position:absolute; font-size:23px; letter-spacing:0.05em; padding:20px 30px 0; font-weight: 600; z-index:10;}
+    .main-news .owl-carousel{padding-top:80px;}
+    .main-news .owl-carousel a{display:block; width:100%; font-size:18px; color:#fff; font-weight:600; letter-spacing: 0; word-break: keep-all; line-height: 32px; padding:0 30px;}
+    .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
+
+    .main-client .btn-more{background:url(../img/common/btn_more2.png) no-repeat 0 0; background-size:cover}
+
+    .btn-more{position:absolute; top:30px; right:30px; width:14px; height:14px; z-index: 10; background:url(../img/common/btn_more.png) no-repeat 0 0; background-size:cover}
 
 }
 
@@ -85,7 +109,12 @@
 
     .base-header{min-height:190px; transition:min-height 0.2s}
     .header-wrap{width:100%; max-width:1400px}
-    .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s}
+    .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
+
+    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;}
+    .util-menu a{display:block; float:left}
+    .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
+    .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s}
     .gnb-dep1{width:100%; text-align:center;}
@@ -97,18 +126,15 @@
 
     .base-body{margin-top:190px;}
 
-    .type-mini .base-header{min-height:100px; box-shadow:0 0 10px rgba(0,0,0,0.1)}
-    .type-mini .header-wrap .logo{top:30px;}
-    .type-mini .gnb-wrap{top:30px}
+    .type-mini .base-header{min-height:100px;}
+    .type-mini .header-wrap .logo{top:30px; left:0; margin-left:0}
+    .type-mini .gnb-wrap{top:32px; width:auto; left:300px}
     .type-mini .gnb-dep1 > li > a{padding:0 30px; font-weight: 400}
-    .type-mini .gnb-dep1 > li.n3{margin-right:320px}
-    .type-mini .gnb-dep1 > li.n4{left:70px}
-    .type-mini .gnb-dep1 > li.n5{left:70px;}
-    .type-mini .gnb-dep1 > li.n5 a{ padding:0 20px}
-    .type-mini .gnb-dep1 > li.n6{left:70px}
+    .type-mini .util-menu{top:30px}
+  
 
     /* main */
-    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; overflow:hidden;}
+    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; overflow:hidden; margin-bottom:70px}
     .main-visual{float:left; width:80%;}
     .main-pof,
     .main-img{float:left; width:20%}
@@ -116,9 +142,47 @@
     .main-img img{width:100%; display:block;}
     .main-pof a,
     .main-img a{display:block;}
-
+    .main-row{float: none;}
     .main-pof.col-2{width:40%}
-    .main-news{position:relative; float:left; min-width:20%; padding-bottom:20%; background:#3d47da}
-    .main-news h3{position: absolute; color:#fff;}
+    .main-news{position:relative; float:left; min-width:20%; max-width:20%;  padding-bottom:20%; background:#3d47da}
+    .main-client{position:relative; float:left; min-width:20%; max-width:20%; padding-bottom:20%; background:#fff}
 
+    .main-news .owl-carousel .owl-dot{background:#fff !important}
+    .main-news .owl-carousel .owl-dots{display:block}
+    .main-square .owl-carousel .owl-dots{position: absolute; bottom:30px; width:100%; text-align: center}
+    .main-square .owl-carousel .owl-dot{width:8px; height:8px; border-radius:4px; background:#000; opacity:0.3; margin:0 6px}
+    .main-square .owl-carousel .owl-dot.active{opacity:1}
+
+    .main-square h3{position:absolute; font-size:23px; letter-spacing:0.05em; padding:20px 30px 0; font-weight: 600; z-index:10;}
+    .main-news .owl-carousel{padding-top:80px;}
+    .main-news .owl-carousel a{display:block; width:100%; font-size:20px; color:#fff; font-weight:400; letter-spacing: 0; word-break: keep-all; line-height: 32px; padding:0 30px;}
+    .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
+
+    .square-1{float:left}
+    .square-2{float:left}
+    .square-3{float:right}
+    .square-4{float:right}
+    .square-5{float:right}
+    .square-6{float:left}
+    .square-7{float:left;position: relative; top: -280px;}
+    .square-8{float:left; position: relative; top: 280px; left:560px}
+    .square-9{float:right}
+    .square-10{float:left; position: relative; left: -560px;}
+
+    .main-client .btn-more{background:url(../img/common/btn_more2.png) no-repeat 0 0; background-size:cover}
+
+    .btn-more{position:absolute; top:30px; right:30px; width:14px; height:14px; z-index: 10; background:url(../img/common/btn_more.png) no-repeat 0 0; background-size:cover}
+
+    .main-visual-num{position: absolute; bottom:40px; right:40px; z-index: 10;letter-spacing: 1px; font-family: auto}
+    .main-visual-num span{font-size:16px; color:#fff; opacity: 0.3;}
+    .main-visual-num b {font-size:45px; color:#fff; font-weight: 600}
+    .main-visual .owl-carousel .owl-nav .owl-prev{width:100px; height:100px; background:url(../img/common/btn_prev.png) no-repeat 0 0; position: absolute; top:50%; left:0; z-index: 10; margin-top:-50px;}
+    .main-visual .owl-carousel .owl-nav .owl-next{width:100px; height:100px; background:url(../img/common/btn_next.png) no-repeat 0 0; position: absolute; top:50%; right:0; z-index: 10; margin-top:-50px;}
+
+
+    .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: left; color:#fff; font-size:14px; line-height:20px; }
+    .footer-wrap{width:100%; max-width:1400px; margin:0 auto; overflow: hidden}
+    .base-footer address{float:left; font-style:normal; letter-spacing:1px; font-weight: 200;}
+    .base-footer address b{font-weight: 600}
+    .footer-copy{float:right; font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px; font-size:12px}
 }
