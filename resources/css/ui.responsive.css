@@ -72,7 +72,8 @@
     .type-mini .util-menu{top:8px}
 
     /* main */
-    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; overflow:hidden;}
+    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; }
+    .main-wrap:after{content:""; display:block; clear:both}
     .main-visual{float:left; width:100%;}
     .main-pof,
     .main-img{float:left; width:25%}
@@ -134,7 +135,8 @@
   
 
     /* main */
-    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; overflow:hidden; margin-bottom:70px}
+    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; margin-bottom:70px}
+    .main-wrap:after{content:""; display:block; clear:both}
     .main-visual{float:left; width:80%;}
     .main-pof,
     .main-img{float:left; width:20%}
