@@ -177,7 +177,7 @@
 
     .base-header{min-height:190px; transition:min-height 0.2s; overflow:hidden;}
     .header-wrap{width:100%; max-width:1400px; height:190px; transition:height 0.2s}
-    .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
+    .header-wrap .logo{left:50%; margin-left:-124px; top:48px; z-index:101; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
 
     .base-header.on{min-height:380px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
     .base-header.on .gnb-dep2{display:block; position:absolute;}
@@ -207,7 +207,7 @@
     .type-mini .gnb-dep2{padding-bottom:40px}
     .type-mini .header-wrap{height:100px}
     .type-mini .header-wrap .logo{top:30px; left:0; margin-left:0}
-    .type-mini .gnb-wrap{top:32px; width:auto; left:300px}
+    .type-mini .gnb-wrap{top:32px; width:auto; left:180px}
     .type-mini .gnb-dep1 > li > a{padding:0 30px;}
     .type-mini .util-menu{top:30px}
   
