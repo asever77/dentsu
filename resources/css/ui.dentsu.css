@@ -6,12 +6,27 @@
 .base-footer address b{font-weight: 600}
 .footer-copy{font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px}
 
+.base-body{position: relative; z-index: 0;}
 .base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
-.header-wrap{width:100%; margin:0 auto; position:relative;}
+.header-wrap{width:100%; height:100%; margin:0 auto; position:relative;}
 .header-wrap .logo{position:absolute; left:15px; top:19px; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
+.gnb-wrap{position:fixed; display:none; right:-230px; width:230px; height:100%; z-index:100; background:#fff; padding: 60px 30px; transition:right 0.15s ease-in}
+.base-header.ready .util-menu,
+.base-header.ready .gnb-wrap{display:block;}
+.base-header.open .gnb-wrap{display:block; top:0; right:0; }
+.gnb-bg{position:fixed; right:-110%; width:100%; height:100%; background:#000; z-index: 99; opacity:0; transition:opacity 0.15s ease-in}
+.base-header.open .gnb-bg{top:0; right:0; opacity:0.7}
+.gnb-dep2{display:none}
+.gnb-dep1-btn{display:block; width:100%; text-decoration:none; color:#1b1b1b; font-size:16px; font-weight:600; padding:10px 0}
 
-.gnb-wrap{display:none;}
-
+.util-menu{display:none; opacity:0; position: absolute; top:11px; right:-200px; overflow: hidden; z-index:1000; transition:right 0.15s ease-in, opacity 0.15s ease-in}
+.base-header.open .util-menu{display:block; opacity:1; right:63px;}
+.util-menu a{display:block; float:left}
+.btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
+.btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
+.btn-close{position: absolute; top:15px; right:20px;}
+.btn-close:before,
+.btn-close:after{background:#000}
 
 .base-body{margin-top:50px; width:100%}
 .base-main{width:100%;}

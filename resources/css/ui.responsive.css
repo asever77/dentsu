@@ -47,29 +47,70 @@
     .base-footer address b{font-weight: 600}
     .footer-copy{font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px; font-size:12px}
 
-    .base-header{min-height:190px; transition:min-height 0.2s}
+    .base-header{min-height:190px; transition:min-height 0.2s; overflow: hidden;}
     .header-wrap{width:100%; max-width:1120px}
     .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s}
+    .base-header.on{min-height:380px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
+    .base-header.on .gnb-dep2{display:block; position:absolute;}
+    .gnb-wrap .btn-close,
+    .header-wrap .btn-menu{display:none}
 
-    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s}
-    .gnb-dep1{width:100%; text-align:center;}
+    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s;right:0; padding:0; height:auto;}
+    .gnb-dep1{width:100%; text-align:center;padding-bottom:40px;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
     .gnb-dep1 > li > a{display:block; padding:0 25px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
-    .gnb-dep2{display:none;}
-    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;}
+    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;display:block; opacity: 1;}
     .util-menu a{display:block; float:left}
     .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
     .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
     .base-body{margin-top:190px;}
+    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
+
+    .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
+    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
+    .gnb-dep2 a:hover,
+    .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
+
+    .gnb-wrap .btn-close,
+    .header-wrap .btn-menu{display:none}
+
+    .type-mini .base-header.on{min-height:190px;}
+    .type-mini .gnb-dep2{padding-bottom:40px}
+    .type-mini .header-wrap{height:50px}
+    .type-mini .gnb-dep1{padding-bottom:14px;}
 
     .type-mini .base-header{min-height:50px; }
     .type-mini .header-wrap .logo{top:18px; left:30px; margin-left:0; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
     .type-mini .gnb-wrap{top:12px; right:100px; width:auto}
     .type-mini .gnb-dep1 > li > a{padding:0 17px; font-size:16px; }
     .type-mini .util-menu{top:8px}
+
+    .ui-m .base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
+    .ui-m .header-wrap{width:100%; height:100%; margin:0 auto; position:relative;}
+    .ui-m .header-wrap .logo{position:absolute; left:15px; top:19px; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover; margin-left:0;}
+    .ui-m .gnb-wrap{position:fixed; display:none; right:-230px; width:230px; height:100%; z-index:100; background:#fff; padding:60px 30px !important; transition:right 0.15s ease-in}
+    .ui-m .base-header.ready .util-menu,
+    .ui-m .base-header.ready .gnb-wrap{display:block;}
+    .ui-m .base-header.open .gnb-wrap{display:block; top:0; right:0; }
+    .ui-m .gnb-bg{position:fixed; right:-110%; width:100%; height:100%; background:#000; z-index: 99; opacity:0; transition:opacity 0.15s ease-in}
+    .ui-m .base-header.open .gnb-bg{top:0; right:0; opacity:0.7}
+    .ui-m .gnb-dep2{display:none}
+    .ui-m .gnb-dep1-btn{display:block; width:100%; text-decoration:none; color:#1b1b1b; font-size:16px; font-weight:600; padding:10px 0 !important}
+    .ui-m .util-menu{display:none; opacity:0; position: absolute; top:11px; right:-200px; overflow: hidden; z-index:1000; transition:right 0.15s ease-in, opacity 0.15s ease-in}
+    .ui-m .base-header.open .util-menu{display:block; opacity:1; right:63px;}
+    .ui-m .util-menu a{display:block; float:left}
+    .ui-m .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
+    .ui-m .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
+    .ui-m .btn-close{position: absolute; top:15px; right:20px;}
+    .ui-m .btn-close:before,
+    .ui-m .btn-close:after{background:#000}
+    .ui-m .base-body{margin-top:50px; width:100%}
+    .ui-m .gnb-wrap .btn-close,
+    .ui-m .header-wrap .btn-menu{display:block}
+    .ui-m .gnb-dep1 > li {width:100%; display:block; text-align: left;}
 
     /* main */
     .main-wrap{position:relative; width:100%; max-width:1120px; min-width:1120px; margin:0 auto; }
@@ -134,26 +175,37 @@
 @media all and (min-width:1400px) {
     .ui-d body:after{content:"desktop"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
 
-    .base-header{min-height:190px; transition:min-height 0.2s}
-    .header-wrap{width:100%; max-width:1400px}
+    .base-header{min-height:190px; transition:min-height 0.2s; overflow:hidden;}
+    .header-wrap{width:100%; max-width:1400px; height:190px; transition:height 0.2s}
     .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
 
-    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;}
+    .base-header.on{min-height:380px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
+    .base-header.on .gnb-dep2{display:block; position:absolute;}
+    /* .gnb-bg{position: absolute; bottom:-190px; left:0; width:100%; min-height:190px; background:red} */
+
+    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden; display:block; opacity: 1;}
     .util-menu a{display:block; float:left}
     .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
     .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
-    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s}
-    .gnb-dep1{width:100%; text-align:center;}
+    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
+    .gnb-dep1{width:100%; text-align:center; padding-bottom:40px;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
     .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
-    .gnb-dep2{display:none;}
-
+    .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
+    .gnb-dep2 a{color:#1b1b1b; font-size:16px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
+    .gnb-dep2 a:hover,
+    .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
     .base-body{margin-top:190px;}
+    .gnb-wrap .btn-close,
+    .header-wrap .btn-menu{display:none}
 
     .type-mini .base-header{min-height:100px;}
+    .type-mini .base-header.on{min-height:240px;}
+    .type-mini .gnb-dep2{padding-bottom:40px}
+    .type-mini .header-wrap{height:100px}
     .type-mini .header-wrap .logo{top:30px; left:0; margin-left:0}
     .type-mini .gnb-wrap{top:32px; width:auto; left:300px}
     .type-mini .gnb-dep1 > li > a{padding:0 30px;}

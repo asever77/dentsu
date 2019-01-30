@@ -491,9 +491,9 @@ a.btn-base-l{padding:17px 20px 16px;}
 .btn-del:before,
 .btn-del:after {background:#222;}
 
-.btn-menu {position:absolute; top:15px; left:15px; width:22px; height:20px;}
+.btn-menu {position:absolute; top:16px; right:20px; width:18px; height:16px;}
 .btn-menu:before,
 .btn-menu:after{content:""; position:absolute; left:0; display:block; width:100%; height:2px; background:#222;}
 .btn-menu:before{top:0;}
 .btn-menu:after{bottom:0;}
-.btn-menu .hide{width:80% !important; height:2px !important; background:#222 !important; z-index:0 !important; display:block; max-height:2px !important; top:50%; left:0; margin-top:-1px;}
+.btn-menu .hide{width:100% !important; height:2px !important; background:#222 !important; z-index:0 !important; display:block; max-height:2px !important; top:50%; left:0; margin-top:-1px;}
