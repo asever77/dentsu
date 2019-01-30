@@ -102,7 +102,7 @@
     .btn-more{position:absolute; top:30px; right:30px; width:14px; height:14px; z-index: 10; background:url(../img/common/btn_more.png) no-repeat 0 0; background-size:cover}
 
     .main-wrap{height:1400px}
-    [class*="square-"]{position:absolute; transition:top 0.4s ease-in, left 0.4s ease-in}
+    [class*="square-"]{position:absolute;}
     .square-0{top:0; left:0}
     .square-1{top:560px; left:0; z-index: 1;}
     .square-2{top:840px; left:840px; z-index: 1;}
@@ -114,6 +114,18 @@
     .square-8{top:1120px; left:280px; z-index: 1;}
     .square-9{top:1120px; left:560px; z-index: 1;}
     .square-10{top:1120px; left:0; z-index: 1;}
+
+    .square-0{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.3s ease-in;}
+    .square-1{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.6s ease-in;}
+    .square-2{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.9s ease-in;}
+    .square-3{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.2s ease-in;}
+    .square-4{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.5s ease-in;}
+    .square-5{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.8s ease-in;}
+    .square-6{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.1s ease-in;}
+    .square-7{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.4s ease-in;}
+    .square-8{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.7s ease-in;}
+    .square-9{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 3.0s ease-in;}
+    .square-10{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 3.3s ease-in;}
 
 }
 
@@ -174,7 +186,7 @@
     .main-news .owl-carousel a{display:block; width:100%; font-size:20px; color:#fff; font-weight:400; letter-spacing: 0; word-break: keep-all; line-height: 32px; padding:0 30px;}
     .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
     .main-wrap{height:1120px}
-    [class*="square-"]{position:absolute; transition:top 0.4s ease-in, left 0.4s ease-in}
+    [class*="square-"]{position:absolute;}
     .square-0{top:0; left:0}
     .square-1{top:0; left:1120px; z-index: 1;}
     .square-2{top:280px; left:1120px; z-index: 1;}
@@ -186,6 +198,18 @@
     .square-8{top:840px; left:560px; z-index: 1;}
     .square-9{top:840px; left:840px; z-index: 1;}
     .square-10{top:840px; left:0; z-index: 1;}
+
+    .square-0{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.3s ease-in;}
+    .square-1{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.6s ease-in;}
+    .square-2{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 0.9s ease-in;}
+    .square-3{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.2s ease-in;}
+    .square-4{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.5s ease-in;}
+    .square-5{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 1.8s ease-in;}
+    .square-6{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.1s ease-in;}
+    .square-7{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.4s ease-in;}
+    .square-8{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 2.7s ease-in;}
+    .square-9{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 3.0s ease-in;}
+    .square-10{transition:top 0.4s ease-in, left 0.4s ease-in, opacity 3.3s ease-in;}
 
     .main-client .btn-more{background:url(../img/common/btn_more2.png) no-repeat 0 0; background-size:cover}
 

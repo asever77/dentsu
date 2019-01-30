@@ -30,19 +30,31 @@
 
 .main-pof.col-2{width:66.6667%}
 .main-wrap{height:auto}
-[class*="square-"]{position: none;}
+[class*="square-"]{position: none; opacity:0; }
+.square-0{transition: opacity 0.3s ease-in}
+.square-1{float:left; transition: opacity 0.15s ease-in}
+.square-2{float:left; transition: opacity 0.5s ease-in}
+.square-3{float:left; transition: opacity 0.25s ease-in}
+.square-4{float:left; transition: opacity 0.1s ease-in}
+.square-5{float:left; transition: opacity 0.4s ease-in}
+.square-6{float:right; transition: opacity 0.32s ease-in}
+.square-7{float:right; transition: opacity 0.22s ease-in}
+.square-8{float:right; transition: opacity 0.18s ease-in}
+.square-9{float:left; transition: opacity 0.42s ease-in}
+.square-10{float:right; transition: opacity 0.2s ease-in}
 
-.square-1{float:left}
-.square-2{float:left}
-.square-3{float:left}
-.square-4{float:left}
-.square-5{float:left}
-.square-6{float:right}
-.square-7{float:right}
-.square-8{float:right}
-.square-9{float:left}
-.square-10{float:right}
 
+.ready .square-0,
+.ready .square-1,
+.ready .square-2,
+.ready .square-3,
+.ready .square-4,
+.ready .square-5,
+.ready .square-6,
+.ready .square-7,
+.ready .square-8,
+.ready .square-9,
+.ready .square-10{opacity:1}
 
 
 .main-visual .owl-dots{display:none}

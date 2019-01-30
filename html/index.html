@@ -129,7 +129,9 @@
 	<script> 
 	;(function($, win, doc, undefined) {
 		$(doc).ready(function(){
-
+			setTimeout(function(){
+				$('body').addClass('ready');
+			},10)
 			
 
 
