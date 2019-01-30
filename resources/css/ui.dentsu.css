@@ -43,7 +43,7 @@
 .square-9{float:left; transition: opacity 0.42s ease-in}
 .square-10{float:right; transition: opacity 0.2s ease-in}
 
-.main-pof .owl-dots{position: absolute;}
+.main-pof .owl-dots{position: absolute; display:none}
 
 .ready .square-0,
 .ready .square-1,
