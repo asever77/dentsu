@@ -68,7 +68,7 @@
     .type-mini .base-header{min-height:50px; }
     .type-mini .header-wrap .logo{top:18px; left:30px; margin-left:0; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
     .type-mini .gnb-wrap{top:12px; right:100px; width:auto}
-    .type-mini .gnb-dep1 > li > a{padding:0 17px; font-weight: 400; font-size:16px; }
+    .type-mini .gnb-dep1 > li > a{padding:0 17px; font-size:16px; }
     .type-mini .util-menu{top:8px}
 
     /* main */
@@ -156,7 +156,7 @@
     .type-mini .base-header{min-height:100px;}
     .type-mini .header-wrap .logo{top:30px; left:0; margin-left:0}
     .type-mini .gnb-wrap{top:32px; width:auto; left:300px}
-    .type-mini .gnb-dep1 > li > a{padding:0 30px; font-weight: 400}
+    .type-mini .gnb-dep1 > li > a{padding:0 30px;}
     .type-mini .util-menu{top:30px}
   
 
