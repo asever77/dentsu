@@ -42,13 +42,13 @@
     body:after{content:"tablet landscape"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
 
     .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: center; color:#fff; font-size:14px; line-height:20px; }
-    .footer-wrap{width:100%; max-width:1400px; margin:0 auto; overflow: hidden}
+    .footer-wrap{width:100%; max-width:1120px; max-width:1120px; margin:0 auto; overflow: hidden}
     .base-footer address{font-style:normal; letter-spacing:1px; font-weight: 200;}
     .base-footer address b{font-weight: 600}
     .footer-copy{font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px; font-size:12px}
 
     .base-header{min-height:190px; transition:min-height 0.2s}
-    .header-wrap{width:100%; max-width:1400px}
+    .header-wrap{width:100%; max-width:1120px}
     .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s}
 
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s}
@@ -72,7 +72,7 @@
     .type-mini .util-menu{top:8px}
 
     /* main */
-    .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; }
+    .main-wrap{position:relative; width:100%; max-width:1120px; min-width:1120px; margin:0 auto; }
     .main-wrap:after{content:""; display:block; clear:both}
     .main-visual{float:left; width:100%;}
     .main-pof,
@@ -100,6 +100,20 @@
     .main-client .btn-more{background:url(../img/common/btn_more2.png) no-repeat 0 0; background-size:cover}
 
     .btn-more{position:absolute; top:30px; right:30px; width:14px; height:14px; z-index: 10; background:url(../img/common/btn_more.png) no-repeat 0 0; background-size:cover}
+
+    .main-wrap{height:1400px}
+    [class*="square-"]{position:absolute; transition:top 0.4s ease-in, left 0.4s ease-in}
+    .square-0{top:0; left:0}
+    .square-1{top:560px; left:0; z-index: 1;}
+    .square-2{top:840px; left:840px; z-index: 1;}
+    .square-3{top:560px; left:840px; z-index: 1;}
+    .square-4{top:840px; left:560px; z-index: 1;}
+    .square-5{top:560px; left:280px; }
+    .square-6{top:840px; left:280px; z-index: 1;}
+    .square-7{top:840px; left:0; z-index: 1;}
+    .square-8{top:1120px; left:280px; z-index: 1;}
+    .square-9{top:1120px; left:560px; z-index: 1;}
+    .square-10{top:1120px; left:0; z-index: 1;}
 
 }
 
@@ -159,17 +173,19 @@
     .main-news .owl-carousel{padding-top:80px;}
     .main-news .owl-carousel a{display:block; width:100%; font-size:20px; color:#fff; font-weight:400; letter-spacing: 0; word-break: keep-all; line-height: 32px; padding:0 30px;}
     .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
-
-    .square-1{float:left}
-    .square-2{float:left}
-    .square-3{float:right}
-    .square-4{float:right}
-    .square-5{float:right}
-    .square-6{float:left}
-    .square-7{float:left;position: relative; top: -280px;}
-    .square-8{float:left; position: relative; top: 280px; left:560px}
-    .square-9{float:right}
-    .square-10{float:left; position: relative; left: -560px;}
+    .main-wrap{height:1120px}
+    [class*="square-"]{position:absolute; transition:top 0.4s ease-in, left 0.4s ease-in}
+    .square-0{top:0; left:0}
+    .square-1{top:0; left:1120px; z-index: 1;}
+    .square-2{top:280px; left:1120px; z-index: 1;}
+    .square-3{top:560px; left:1120px; z-index: 1;}
+    .square-4{top:560px; left:840px; z-index: 1;}
+    .square-5{top:560px; left:280px; }
+    .square-6{top:840px; left:280px; z-index: 1;}
+    .square-7{top:560px; left:0; z-index: 1;}
+    .square-8{top:840px; left:560px; z-index: 1;}
+    .square-9{top:840px; left:840px; z-index: 1;}
+    .square-10{top:840px; left:0; z-index: 1;}
 
     .main-client .btn-more{background:url(../img/common/btn_more2.png) no-repeat 0 0; background-size:cover}
 

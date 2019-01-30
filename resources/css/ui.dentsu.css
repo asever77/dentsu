@@ -29,6 +29,9 @@
 .main-img a{display:block;}
 
 .main-pof.col-2{width:66.6667%}
+.main-wrap{height:auto}
+[class*="square-"]{position: none;}
+
 .square-1{float:left}
 .square-2{float:left}
 .square-3{float:left}
@@ -40,8 +43,12 @@
 .square-9{float:left}
 .square-10{float:right}
 
+
+
 .main-visual .owl-dots{display:none}
-[class*="square-"]{ transition:all 0.3s ease-in}
+
+/* [class*="square-"]{ transition:all 0.3s ease-in} */
+
 .main-square{position:relative; float:left; overflow:hidden;}
 .main-square h3{position:absolute; font-size:3vw; letter-spacing:0.05em; padding:2vw 4vw 0; font-weight: 600; z-index:10;}
 
