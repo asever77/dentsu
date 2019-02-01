@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+  
+	<title>Protfolio | dentsu KOREA</title>
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../resources/js/ui.base.js"></script>
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+
+		<div class="base-body" id="baseBody">
+			<main role="main" class="base-main" id="baseMain">
+				<div class="tit-wrap type-portfolio">
+					Portfolio
+				</div>
+				<div class="inner-wrap mgt-xxxl">
+					<div class="ui-tab" id="tabPortfolio">
+						<div class="search-wrap">
+							<input type="text" value="">
+							<button type="button" class="btn-search"><span class="hide">검색</span></button>
+						</div>
+						<div class="ui-tab-btns">
+							<button type="button" class="ui-tab-btn"><i>All</i></button>
+							<button type="button" class="ui-tab-btn"><i>TV</i></button>
+							<button type="button" class="ui-tab-btn"><i>Print</i></button>
+							<button type="button" class="ui-tab-btn"><i>OOH</i></button>
+							<button type="button" class="ui-tab-btn"><i>Digital</i></button>
+						</div>
+						<div class="ui-tab-pnls">
+							<section class="ui-tab-pnl">
+								<ul class="list-portfolio">
+									<li>
+										<a href="#ggg">
+											<div class="list-portfolio-img">
+												<img src="../resources/img/dummy/@portfolio_1.jpg" alt="">
+												
+											</div>
+											<div class="list-portfolio-info">
+												<span class="n1">LEXUS</span>
+												<span class="n2">2018. <b>TV</b></span>
+												<strong><i>NEW GENERATION ES 300h</i></strong>
+											</div>
+										</a>
+										<div class="list-portfolio-sns">
+											<a href="#twitter" class="ico-tw"><span class="hide"> twitter</span></a>
+											<a href="#facebook" class="ico-fb"><span class="hide">facebook</span></a>
+											<a href="#link" class="ico-lk"><span class="hide">link</span></a>
+										</div>
+									</li>
+
+									<li>
+										<a href="#ggg">
+											<div class="list-portfolio-img">
+												<img src="../resources/img/dummy/@portfolio_2.jpg" alt="">
+												
+											</div>
+											<div class="list-portfolio-info">
+												<span class="n1">LEXUS</span>
+												<span class="n2">2018. <b>TV</b></span>
+												<strong><i>NEW GENERATION ES 300h</i></strong>
+											</div>
+										</a>
+										<div class="list-portfolio-sns">
+											<a href="#twitter" class="ico-tw"><span class="hide"> twitter</span></a>
+											<a href="#facebook" class="ico-fb"><span class="hide">facebook</span></a>
+											<a href="#link" class="ico-lk"><span class="hide">link</span></a>
+										</div>
+									</li>
+								</ul>
+
+								<div class="btn-wrap">
+									<button type="button" class="btn-listmore">More</button>
+								</div>
+							</section>
+
+						</div>
+					</div>
+
+				</div>
+				
+
+
+			</main>
+		</div>
+
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+
+	<script> 
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiTab({ 
+				id:'tabPortfolio', 
+				current:0, 
+				unres:true, 
+				callback:tabPortfolioList 
+			});
+
+			function tabPortfolioList(v){
+				console.log(v.current);
+			}
+
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>

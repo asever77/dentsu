@@ -7,9 +7,10 @@
 .footer-copy{font-style:normal; letter-spacing:1px; font-weight: 200; margin-top:5px}
 
 .base-body{position: relative; z-index: 0;}
-.base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
+.base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10; box-shadow: 0 0 10px rgba(0,0,0,0.3)}
 .header-wrap{width:100%; height:100%; margin:0 auto; position:relative;}
 .header-wrap .logo{position:absolute; left:15px; top:19px; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover}
+.header-wrap .logo a{display:block; width:100%; height:100%;}
 .gnb-wrap{position:fixed; display:none; right:-230px; width:230px; height:100%; z-index:100; background:#fff; padding: 60px 30px; transition:right 0.15s ease-in}
 .base-header.ready .util-menu,
 .base-header.ready .gnb-wrap{display:block;}
@@ -108,3 +109,58 @@
 
 /* [class*="square-"] > a{transform-style: preserve-3d; transition: transform 1s ease;}
 [class*="square-"] > a:hover{position:relative; transform:rotateY(180deg); z-index: 100} */
+
+
+ /* Portfolio */
+ .tit-wrap{width:100%; height:90px; text-align: center; color:#fff; font-size:20px; padding-top:30px; letter-spacing:2px; font-weight:600;}
+ .tit-wrap.type-portfolio{background:#5f32b7; background:url(../img/content/topbg_portfolio.jpg) repeat 50% 0; background-size:cover}
+
+.ui-tab-btns{width:100%; text-align: center}
+.ui-tab-btn{display:inline-block; float:none; padding:5px 4px 5px; min-height:40px; border-left:0; font-size:16px; margin:0 10px; font-weight: 200; letter-spacing: 2px; outline:none; color:#1b1b1b;}
+.ui-tab-btn i{border:0 !important}
+.ui-tab-btn:focus,
+.ui-tab-btn.selected{color:#000; font-weight:600; letter-spacing:0; border-bottom:3px solid #6b3bc0}
+.ui-tab-pnl{width:100%; padding:0; top:0; left:0; } 
+
+.list-portfolio{width:100%; padding:0 15px; margin-top:20px}
+.list-portfolio li{width:100%; position: relative; padding-bottom:30px}
+.list-portfolio-img{width:100%; position: relative; overflow: hidden; background:#000; }
+.list-portfolio-img img{display:block;width:100%; transition:opacity 0.3s ease-in}
+.list-portfolio li:hover .list-portfolio-img img{opacity:0.5}
+.list-portfolio li:hover .list-portfolio-sns{opacity:1}
+.list-portfolio-sns{position: absolute; opacity:0; top:0; left:0; width:100%; padding-top:23%; text-align:center; transition:opacity 0.3s ease-in}
+.list-portfolio-sns:before,
+.list-portfolio-sns:after{content:""; display:inline-block; width:10%; border-top:1px solid #fff; opacity:0.2; margin:0 10px; vertical-align: middle }
+.list-portfolio-sns a{width:22px; height:22px; display:inline-block; margin:0 8px; vertical-align: middle;}
+.list-portfolio-sns .ico-tw{background:url(../img/content/sns_tw.png) no-repeat 0 0; background-size: cover}
+.list-portfolio-sns .ico-fb{background:url(../img/content/sns_fb.png) no-repeat 0 0;background-size: cover}
+.list-portfolio-sns .ico-lk{background:url(../img/content/sns_lk.png) no-repeat 0 0;background-size: cover}
+.list-portfolio li > a{display:block; width:100%;}
+.list-portfolio-info{width:100%; position: relative; overflow: hidden; margin-top:10px; color:#1b1b1b}
+.list-portfolio-info span{display:block;}
+.list-portfolio-info .n1{float:left; font-size:12px; letter-spacing: 1px; font-weight: 500}
+.list-portfolio-info .n2{float:right; font-size:11px; letter-spacing: 0; font-weight: 200}
+.list-portfolio-info .n2 b{color:#6b3bc0; font-weight: 500}
+.list-portfolio-info strong{float:left;display:block; width:100%; font-size:16px; margin-top:7px; letter-spacing: 1px; font-weight: 500; text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;overflow:hidden;}
+a:focus .list-portfolio-info strong,
+a:hover .list-portfolio-info strong{color:#6b3bc0}
+.list-portfolio-info strong i{padding-bottom:2px; display:inline-block; border-bottom:2px solid #fff}
+a:focus .list-portfolio-info strong i,
+a:hover .list-portfolio-info strong i{padding-bottom:2px; border-bottom:2px solid #6b3bc0}
+
+.btn-listmore{width:100%; height:70px; background:#eee; text-align: center; font-size:16px; margin-bottom:50px;}
+
+.search-wrap{position:relative; top:0; right:0; margin:0 15px; width:calc(100% - 30px); height:46px; background:#f5f5f5; padding:11px 15px; z-index: 10; margin-bottom:15px}
+.search-wrap input{border:0; width:100%; padding-right:30px; background:transparent}
+.search-wrap .btn-search{position: absolute; top:7px; right:5px;}
+
+
+
+
+
+
+
+
+
+
+
