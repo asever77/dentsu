@@ -154,6 +154,48 @@ a:hover .list-portfolio-info strong i{padding-bottom:2px; border-bottom:2px soli
 .search-wrap input{border:0; width:100%; padding-right:30px; background:transparent}
 .search-wrap .btn-search{position: absolute; top:7px; right:5px;}
 
+.portfolio-view{background:#f5e9d6;padding-bottom:0}
+.portfolio-view-head{background-size:cover; padding-bottom:0; background-position:50% 0; min-height:180px}
+.portfolio-view-head h2{position:relative; display:block; top:0; padding-top:80px; font-size:20px; width:100%; text-align: center; color:#fff; line-height: 1.5; font-weight:100}
+.portfolio-view-head h2 strong{font-weight:700}
+.portfolio-view-body{position:relative; max-width:100%; width:100%; margin:0 auto; background:#fff; padding:20px 20px; margin-top:0; min-height:500px; box-shadow: 0 5px 20px rgba(0,0,0,0.2)}
+
+.portfolio-view-info{position:relative; width:100%; border-bottom:1px solid #eee; padding-bottom:25px;}
+.portfolio-view-info dl{width:100%; padding-right:0; padding-top:10px; overflow: hidden;}
+.portfolio-view-info dt{width:100px; float:left; clear:left; margin-bottom:15px; font-size:14px; font-weight: 600; letter-spacing:1px; line-height: 14px}
+.portfolio-view-info dd{width:calc(100% - 100px); float:left;margin-bottom:15px; color:#1b1b1b; font-size:13px; letter-spacing:1px; line-height: 14px}
+
+.portfolio-view-info dd span{font-size:12px; display:inline-block; vertical-align: middle; margin-right:20px; color:#707070; margin-bottom:10px}
+.portfolio-view-info dd span img{display:inline-block; vertical-align: middle; margin-right:5px; height:14px;}
+
+.btn-website{position:relative; top:0; right:0; color:#fff; display:block; width:100%; text-align: center; height:60px; background:#6b3bc0; line-height: 58px; font-weight: 600; letter-spacing: 1px; text-decoration: none}
+.portfolio-view-sns{position:relative; top:0; right:0; width:100%; text-align: center; margin:15px 0 0}
+.portfolio-view-sns a{display:inline-block; margin:0 4px; }
+.portfolio-view-sns .ico-tw{width:34px; height:34px; background:url(../img/content/btn_tw.png) no-repeat 0 0;}
+.portfolio-view-sns .ico-fb{width:34px; height:34px; background:url(../img/content/btn_fb.png) no-repeat 0 0;}
+.portfolio-view-sns .ico-lk{width:34px; height:34px; background:url(../img/content/btn_lk.png) no-repeat 0 0;}
+
+.portfolio-view-cont{position:relative; width:100%; text-align:center; padding:0 0 50px; font-size:15px; word-break: keep-all}
+
+.portfolio-view-link{position:relative; width:100%; padding:40px 0; border-top:1px solid #eee; text-align:center; }
+.portfolio-view-link .tit{position:absolute; top:-12px; left:50%; display:block; text-align:center; background:#fff; font-size:14px; letter-spacing: 1px; font-weight: 600; margin-left:-45px; width:90px}
+.portfolio-view-link a{display:inline-block; font-size:20px; color:#1b1b1b; letter-spacing: 1px}
+.portfolio-view-link a > *{display:inline-block; width:100%; }
+.portfolio-view-link a strong{font-size:15px; color:#6b3bc0; font-weight:700}
+.portfolio-view-link a i{display:inline-block;border-bottom:2px solid #6b3bc0;}
+
+.portfolio-view-cont .view-move,
+.portfolio-view-cont .view-img,
+.portfolio-view-cont .view-txt{width:100%; font-size:15px; line-height:1.6; font-weight: 200; margin-top:50px}
+.portfolio-view-cont .view-txt br{display:none}
+.portfolio-view-cont .view-txt strong{font-weight: 700; display:block; width:100%; text-align: center}
+.portfolio-view-cont .view-txt dl{font-size:14px;}
+.portfolio-view-cont .view-txt dl + dl{ margin-top:15px}
+.portfolio-view-cont .view-txt dt{font-weight: 700}
+.portfolio-view-cont .view-move{position: relative; width:100%; padding-bottom:56%; }
+.portfolio-view-cont .view-move iframe{position: absolute; top:0; left:0;}
+.portfolio-view-cont .view-img img{width:100%;}
+
 
 
 
