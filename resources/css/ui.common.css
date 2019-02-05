@@ -421,7 +421,7 @@ tbody.line-t{border-top:1px solid #c5c5c5}
 .tbl-base-v > tbody > th {background:#f1f1f1; border-bottom:1px solid #e4e4e4; border-left:1px solid #e4e4e4; color:#000; padding:5px 15px; font-weight:500; font-size:12px; height:40px;}
 
 /* table:scroll */
-.tbl-scroll {width:100%; width:100%; border-bottom:1px solid #c5c5c5; border-top:1px solid #c5c5c5; margin:10px 0;}
+.tbl-scroll {width:100%; border-bottom:1px solid #c5c5c5; border-top:1px solid #c5c5c5; margin:10px 0;}
 .tbl-scroll-thead table{margin:0; width:100%; border:0; table-layout:fixed; }
 .tbl-scroll-thead td {background:#f1f1f1;  border-left:1px solid #e4e4e4; color:#000; padding:5px 10px; font-weight:500; font-size:12px; height:40px;}
 .tbl-scroll-thead td:first-child{border-left:0;}
