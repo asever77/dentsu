@@ -55,7 +55,7 @@
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s;right:0; padding:0; height:auto;}
     .gnb-dep1{width:100%; text-align:center;padding-bottom:40px;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
-    .gnb-dep1 > li > a{display:block; padding:0 25px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
+    .gnb-dep1 > li > a{display:block; padding:0 25px; font-size:16px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
     .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;display:block; opacity: 1;}
@@ -63,7 +63,7 @@
     .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
     .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
-    .base-body{margin-top:190px;}
+    .base-body{margin-top:190px; transition: margin 0.4s ease-in}
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
 
     .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
@@ -84,6 +84,7 @@
     .type-mini .gnb-wrap{top:12px; right:100px; width:auto}
     .type-mini .gnb-dep1 > li > a{padding:0 17px; font-size:16px; }
     .type-mini .util-menu{top:8px}
+    .type-mini .base-body{margin-top:50px;}
 
     .ui-m .base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
     .ui-m .header-wrap{width:100%; height:100%; margin:0 auto; position:relative;}
@@ -256,7 +257,7 @@
     .header-wrap{width:100%; max-width:1400px; height:190px; transition:height 0.2s}
     .header-wrap .logo{left:50%; margin-left:-124px; top:48px; z-index:101; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
 
-    .base-header.on{min-height:380px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
+    .base-header.on{min-height:280px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
     .base-header.on .gnb-dep2{display:block; position:absolute;}
     /* .gnb-bg{position: absolute; bottom:-190px; left:0; width:100%; min-height:190px; background:red} */
 
@@ -268,27 +269,28 @@
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
     .gnb-dep1{width:100%; text-align:center; padding-bottom:40px;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
-    .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:20px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
+    .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:16px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
     .gnb-dep1 > li:nth-child(3) > a:hover,
     .gnb-dep1 > li:nth-child(3) > a:focus{color:#6b3bc0}
     .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
-    .gnb-dep2 a{color:#1b1b1b; font-size:16px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
+    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
     .gnb-dep2 a:hover,
     .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
-    .base-body{margin-top:190px;}
+    .base-body{margin-top:190px; transition: margin 0.4s ease-in}
     .gnb-wrap .btn-close,
     .header-wrap .btn-menu{display:none}
 
     .type-mini .base-header{min-height:100px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
-    .type-mini .base-header.on{min-height:240px;}
+    .type-mini .base-header.on{min-height:190px;}
     .type-mini .gnb-dep2{padding-bottom:40px}
     .type-mini .header-wrap{height:100px}
     .type-mini .header-wrap .logo{top:30px; left:0; margin-left:0}
     .type-mini .gnb-wrap{top:32px; width:auto; left:180px}
     .type-mini .gnb-dep1 > li > a{padding:0 30px;}
     .type-mini .util-menu{top:30px}
+    .type-mini .base-body{margin-top:100px;}
   
     /* main */
     .main-wrap{position:relative; width:100%; max-width:1400px; margin:0 auto; margin-bottom:70px}
