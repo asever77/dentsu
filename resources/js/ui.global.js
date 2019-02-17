@@ -87,9 +87,7 @@ if (!Object.keys){
 	}()); 
 }
 
-//utils module
 ;(function ($, win, doc, undefined) {
-	console.log('global')
 
 	'use strict';
 
@@ -140,7 +138,6 @@ if (!Object.keys){
 		},
 		easing;
 
-	//IIFE - device & browser setup check
 	(function () {
 		var width = document.documentElement.offsetWidth,
 			devsize = [1920, 1600, 1440, 1280, 1024, 960, 840, 720, 600, 480, 400, 360],
@@ -184,12 +181,10 @@ if (!Object.keys){
 		}
 	})();
 	
-	//requestAnimationFrame
 	win.requestAFrame = (function () {
 		return win.requestAnimationFrame || win.webkitRequestAnimationFrame || win.mozRequestAnimationFrame || win.oRequestAnimationFrame ||
-			//if all else fails, use setTimeout
 			function (callback) {
-				return win.setTimeout(callback, 1000 / 60); //shoot for 60 fp
+				return win.setTimeout(callback, 1000 / 60); 
 			};
 	})();
 	win.cancelAFrame = (function () {
@@ -199,7 +194,6 @@ if (!Object.keys){
 			};
 	})();
 
-	//jquery easing add
 	for (easing in easings) {
 		$.easing[easing] = (function(easingname) {
 			return function(x, t, b, c, d) {
@@ -208,7 +202,6 @@ if (!Object.keys){
 		})(easing);
 	}
 
-	//global namespace
 	if (!!win[global]) {
 		throw new Error("already exists global!> " + global);
 	} else {
@@ -218,8 +211,7 @@ if (!Object.keys){
             }
         });
     }
-	console.log(win[global])
-	//components option
+
 	win[global].option = {
 		keys: { 
 			'tab': 9, 'enter': 13, 'alt': 18, 'esc': 27, 'space': 32, 'pageup': 33, 'pagedown': 34, 'end': 35, 'home': 36, 'left': 37, 'up': 38, 'right': 39, 'down': 40,
@@ -262,7 +254,6 @@ if (!Object.keys){
 			return parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (parts[1] ? "." + parts[1] : "");
         },
         partsAdd0 :function(x, y, z) {
-            //숫자 한자리수 일때 0 앞에 붙이기
             var y = y === undefined ? 10 : y,
                 z = z === undefined ? '0' : z;
 
@@ -305,23 +296,11 @@ if (!Object.keys){
 		browser.safari = browser.webkit && !browser.chrome;
 		browser.app = ua.indexOf('appname') > -1 ? true : false;
 
-		//touch, mobile 환경 구분
 		support.touch = browser.ios || browser.android || (doc.ontouchstart !== undefined && doc.ontouchstart !== null);
 		browser.mobile = support.touch && ( browser.ios || browser.android);
-		//navigator.platform ? filter.indexOf(navigator.platform.toLowerCase()) < 0 ? browser.mobile = false : browser.mobile = true : '';
-		
-		//false 삭제
-		// for (j in browser) {
-		// 	if (!browser[j]) {
-		// 		delete browser[j]
-		// 	}
-		// }
-		
-		//os 구분
 		browser.os = (navigator.appVersion).match(/(mac|win|linux)/i);
 		browser.os = browser.os ? browser.os[1].toLowerCase() : '';
 
-		//version 체크
 		if (browser.ios || browser.android) {
 			version = ua.match(/applewebkit\/([0-9.]+)/i);
 			version && version.length > 1 ? browser.webkitversion = version[1] : '';
@@ -347,7 +326,6 @@ if (!Object.keys){
 			browser.ie9 = false;
 		}
 
-		//class 생성
 		$('html')
 		.addClass(browser.os)
 		.addClass(browser.chrome? 'chrome' : browser.firefox ? 'firefox' : browser.opera ? 'opera' : browser.safari ? 'safari' : browser.ie ? 'ie ie' + browser.ie : '')
@@ -428,11 +406,9 @@ if (!Object.keys){
 	}
 	function createUiConsoleGuide(opt) {
 		if (!win[global].browser.ie) {
-			console.log('');
 			for (var i = 0; i < opt.length; i++) {
 				(i === 0) ? console.log("%c" + opt[i], "background:#333; color:#ffe400; font-size:12px"): console.log(opt[i]);
 			}
-			console.log('');
 		}
 	}
 
@@ -465,7 +441,6 @@ if (!Object.keys){
 			error,
 			err;
 
-		console.log()
 		if (first && target.val().length === 0) {
 			return false;
 		}
@@ -586,8 +561,6 @@ if (!Object.keys){
 			});
 
 			callback ? callback() : '';
-			// target.value = '';
-			// target.focus();
 		}
 		
 	}
@@ -605,14 +578,6 @@ if (!Object.keys){
 	};
 	function createUiAjax(opt) {
 		if (opt === undefined) {
-			win[global].uiConsoleGuide([
-				global + ".uiAjax({ id:'아이디명', url:'링크주소', add:true/false, page:true/false, callback:function(){...} );",
-				"- id: #을 제외한 아이디명만 입력(!필수)",
-				"- url: 링크 주소 입력(!필수)",
-				"- page: true일 경우 html추가 및 값 전달, false일 경우 값만 전달, (!선택 - 기본값 true)",
-				"- add: false일 경우 삭제추가, true일 경우 추가(!선택 - 기본값 false)",
-				"- callback: 콜백함수 (!선택)",
-			]);
 			return false;
 		}
 
@@ -653,14 +618,6 @@ if (!Object.keys){
 	};
 	function createUiScroll(opt){
 		if (opt === undefined) {
-			win[global].uiConsoleGuide([
-				global + ".uiScroll({ value:0, speed:600, focus:'#name', callback:function(){...} );",
-				"- value: 움직일 위치값(!선택 - 기본값 0)",
-				"- speed: 속도(!선택 - 기본값 600)",
-				"- p: 방향(!선택 - 기본값 'top')",
-				"- focus: 포커스이동  (!선택)",
-				"- callback: 콜백함수 (!선택)"
-			]);
 			return false;
 		}
 
@@ -755,7 +712,6 @@ if (!Object.keys){
 			}
 
 			if (opt.top > 0 && $this.children('.ui-scrollbar-item').position().top === 0) {
-				console.log('item top : ', $this.children('.ui-scrollbar-item').position().top, opt.top)
 				var wrap_h = $this.innerHeight(),
 					item_h = $this.children('.ui-scrollbar-item').outerHeight(true),
 					max_y = item_h - wrap_h;
@@ -773,7 +729,6 @@ if (!Object.keys){
 				html_scrollbar = '';
 
 			//set
-			console.log(!$wrap.data('ready') || !$wrap.attr('id'))
 			if (!$wrap.data('ready') || !$wrap.attr('id')) {
 				!$wrap.attr('id') ?
 				$wrap.css('overflow','hidden').attr('tabindex', 0).attr('id', 'uiScrollBar_'+ i).data('ready', true):
@@ -785,7 +740,6 @@ if (!Object.keys){
 				html_scrollbar += '</div>';
 
 				$wrap.prepend(html_scrollbar);
-				console.log('bar 높이: ' ,$wrap.attr('id'), $item.outerHeight(true) );
 				$wrap.find('> .ui-scrollbar-barwrap .ui-scrollbar-bar').css('height', Math.floor($wrap.innerHeight() / ($item.outerHeight(true) / 100)) +'%')
 			}
 		}
@@ -800,16 +754,11 @@ if (!Object.keys){
 				e.preventDefault();
 				e.stopPropagation();
 
-				
-
 				var $this = $(this),
 					wrap_h = $this.innerHeight(),
 					item_h = $this.children('.ui-scrollbar-item').outerHeight(true),
 					max_y = item_h - wrap_h,
 					bar_t;
-
-				console.log(wrap_h, item_h, max_y);
-				
 
 				//wheel event
 				$this.off('mousewheel.aa DOMMouseScroll.aa').on('mousewheel.aa DOMMouseScroll.aa', function(e){
@@ -849,8 +798,6 @@ if (!Object.keys){
 						if (e.pageY === undefined) {
 							y_s = e.clientY;
 						}
-
-						console.log('s: ' + y_s, t_s, s_h);
 					}
 
 					$(doc).off('mousemove.bar touchmove.bar').on('mousemove.bar touchmove.bar', function(e){
@@ -866,7 +813,6 @@ if (!Object.keys){
 
 			function keyEventAct(e){
 				$('.ui-scrollbar').off('keydown.bb').on('keydown.bb', function(e){
-					console.log(1111);
 					var $this = $(this),
 						wrap_h = $this.innerHeight(),
 						item_h = $this.children('.ui-scrollbar-item').outerHeight(true),
@@ -883,14 +829,12 @@ if (!Object.keys){
 						case keys.up:
 							e.preventDefault();
 							e.stopPropagation();
-							console.log('up');
 							wheelAct($this, 120, wrap_h, item_h, max_y);
 							break;
 
 						case keys.down:
 							e.preventDefault();
 							e.stopPropagation();
-							console.log('down');
 							wheelAct($this, -120, wrap_h, item_h, max_y);
 							break;
 					}
@@ -910,8 +854,6 @@ if (!Object.keys){
 				v,
 				wh,
 				ms = 3;
-
-			console.log('item-top : '+ item_top);
 
 			win[global].uiScrollBar.overlapExe = win[global].uiScrollBar.overlapExe + 1;
 
@@ -935,7 +877,6 @@ if (!Object.keys){
 				v = max_y * -1;
 				item_top = max_y * -1;
 			}
-			console.log(win[global].uiScrollBar.overlapExe);
 			clearTimeout(win[global].uiScrollBar.timer);
 			win[global].uiScrollBar.timer = setTimeout(function(){
 				var v_bar = (v / (max_y / 100)) * (bar_space / 100);
@@ -978,8 +919,6 @@ if (!Object.keys){
 				
 				v_item = Math.ceil(wrap_unit * per);
 
-				console.log(v_item, w_sh);	
-
 				$item.css('top', v_item +'px');
 
 			}
@@ -995,19 +934,11 @@ if (!Object.keys){
 		focusitem : '.ui-select-tit, iframe, a:not([data-disabled]), button:not(:disabled), input:not(:disabled), select:not(:disabled), textarea:not(:disabled), label, [role="button"]',
 		callback: false,
 		focusnot: false,
-		type: 'hold' //'hold', 'sense'
+		type: 'hold' 
 	};
-
-
-
 
 	function createUiFocusTab(opt){
 		if (opt === undefined) {
-			win[global].uiConsoleGuide([
-				global + ".uiFocusHold({ id:'css셀렉트' );",
-				"- selector: css셀렉터 형식 예) '#aaa', '.aa .bb' ...(!필수)",
-				"※  지정한 특정영역에서 tab 이동 시 포커스 홀딩 "
-			]);
 			return false;
 		}
 		

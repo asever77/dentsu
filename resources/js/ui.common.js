@@ -7,9 +7,7 @@
         init: function(){
             $plugins.uiAjax({ id:'baseHeader', url:'../html/inc/header.html', page:true, callback:$plugins.common.header });
             $plugins.uiAjax({ id:'baseFooter', url:'../html/inc/footer.html', page:true, callback:$plugins.common.footer });
-            
-            console.log('------------------------------------------------------')
-            
+                        
             $(win).on('scroll', function(){
                headerChange($(win).scrollTop())
             });
@@ -25,13 +23,11 @@
            
 
             function imgChange(){
-                console.log(111111111111)
                 $('.base-header').removeClass('ready').removeClass('open');
 
                 if ($(win).outerWidth() > 1399) {
                     $('img').each(function(){
                         var $this = $(this);
-                        console.log($this.attr('dsrc'))
                         $this.attr('src', $this.attr('dsrc'));
                     });
                 } else {
@@ -83,7 +79,6 @@
         },
   
         footer: function(){
-            console.log('footer load');
         }
     };
 
@@ -98,9 +93,7 @@
         modal: function(modalId){
             switch(modalId) {
                 case 'modalID':
-                    break;  
-
-                    
+                    break;     
             }
         }
     }
