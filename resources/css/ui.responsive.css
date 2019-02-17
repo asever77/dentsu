@@ -213,9 +213,8 @@
     .list-item li > a{display:block; width:100%;}
     .list-item-info{width:100%; position: relative; overflow: hidden; margin-top:15px; color:#1b1b1b}
     .list-item-info span{display:block;}
-    .list-item-info .n1{float:left; font-size:18px; letter-spacing: 1px; font-weight: 500}
+    .list-item-info .n1{font-size:18px}
     .list-item-info .n2{float:right; font-size:14px; letter-spacing: 0; font-weight: 200}
-    .list-item-info .n2 b{color:#6b3bc0; font-weight: 500}
     .list-item-info strong{float:left;display:block; width:100%; font-size:26px; margin-top:12px; letter-spacing: 1px; font-weight:700; height:90px;}
     .list-item-info strong i{padding-bottom:2px; display:inline; border-bottom:2px solid #fff}
     a:focus .list-item-info strong i,
@@ -479,10 +478,9 @@
 
     .list-item-info{width:100%; position: relative; overflow: hidden; margin-top:20px; color:#1b1b1b}
     .list-item-info span{display:block;}
-    .list-item-info .n1{float:left; font-size:20px; letter-spacing: 1px; font-weight: 500}
+    .list-item-info .n1{font-size:20px}
     .list-item-info .n2{float:right; font-size:16px; letter-spacing: 0; font-weight: 200}
     .list-item-info .n3{float:left; font-size:16px; letter-spacing: 0; font-weight: 200}
-    .list-item-info .n2 b{color:#6b3bc0; font-weight: 500}
     .list-item-info strong{float:left;display:block; width:100%; font-size:26px; margin-top:12px; letter-spacing: 1px; font-weight: 700; height:90px;}
     .list-item-info strong i{padding-bottom:2px; display:inline; border-bottom:2px solid #fff}
     a:focus .list-item-info strong i,
@@ -580,7 +578,7 @@
     .base-main.type-client{background:#f7f7f7}
     .inner-wrap.type-client{overflow:hidden;}
     .list-client{width:1475px; font-size:0; position:relative; left:-37px; margin-top:100px;}
-    .list-client li{display:inline-block; margin:0 38px 75px 37px ; }
+    .list-client li{display:inline-block; width:18%; margin:0 1% 2%;}
 
     .contact-info{width:100%; overflow:hidden; margin-top:100px}
     .contact-info dl{float:left; width:50%;}
@@ -598,4 +596,8 @@
 /* width:320 */
 @media all and (max-width:320px) {
     .ui-tab-btn {font-size:13px;margin:0 8px}
+}
+/* min-width:480 */
+@media all and (min-width:480px) {
+    .m-block {display:inline}
 }
