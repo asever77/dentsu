@@ -92,7 +92,7 @@ if (!Object.keys){
 	'use strict';
 
 	var global = '$plugins', 
-		namespace = 'netiveUI.plugins',
+		namespace = 'dentsu.plugins',
 		easings = {
 			linear : function(t,b,c,d){return c*t/d+b;},
 			easeInQuad : function(t,b,c,d){return c*(t/=d)*t+b;},
