@@ -106,7 +106,8 @@
 
 .main-visual .owl-carousel .owl-nav .owl-prev{width:50px; height:50px; background:url(../img/common/btn_prev.png) no-repeat 0 0; background-size:cover; position: absolute; top:50%; left:0; z-index: 10; margin-top:-25px;}
 .main-visual .owl-carousel .owl-nav .owl-next{width:50px; height:50px; background:url(../img/common/btn_next.png) no-repeat 0 0; background-size:cover; position: absolute; top:50%; right:0; z-index: 10; margin-top:-25px;}
-
+.main-visual .owl-carousel .item .video-wrap{position: absolute; top:0; left:0; width:100%; height:100%; z-index:-1}
+.main-visual .owl-carousel .item .video-wrap.on{z-index:1}
 /* [class*="square-"] > a{transform-style: preserve-3d; transition: transform 1s ease;}
 [class*="square-"] > a:hover{position:relative; transform:rotateY(180deg); z-index: 100} */
 
