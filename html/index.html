@@ -37,7 +37,7 @@
 								<a href="#"><img src="../resources/img/dummy/@vs_1.jpg" alt="" ></a>
 							</div>
 							<div class="item">
-								<button type="button" data-video="https://www.youtube.com/embed/QbLL6xKknzg?enablejsapi=1&amp;showinfo=0&amp;rel=0" class="btn-video"><img src="../resources/img/dummy/@vs_2.jpg" alt="" ></button>
+								<button type="button" data-video="https://www.youtube.com/embed/QbLL6xKknzg?autoplay=1&amp;enablejsapi=1&amp;showinfo=0&amp;rel=0" class="btn-video"><img src="../resources/img/dummy/@vs_2.jpg" alt="" ></button>
 								<div class="video-wrap"></div>
 							</div>
 							<div class="item">
@@ -195,6 +195,7 @@
 					$wrap = $(this).next('.video-wrap');
 
 				$wrap.addClass('on');
+				$wrap.closest('.owl-carousel').data('video-play', true);
 				$('#mainVs').trigger('stop.owl.autoplay');
 				videoPlay($(this), v);
 			});
@@ -202,13 +203,23 @@
 				var html_video = '<iframe width="100%" height="100%" id="vod-iframe" src="'+ v +'"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>';
 				t.next('.video-wrap').html(html_video);
 			}
+			$('#mainVs').on('mouseover', function(){
+				$(this).trigger('stop.owl.autoplay');
+			}).on('mouseleave', function(){
+				if (!$(this).data('video-play')) {
+					$(this).trigger('play.owl.autoplay');
+				}
+				
+			});
+
 
 			$('#mainVs').owlCarousel({
 				loop:true,
 				margin:0,
 				nav:true,
 				autoplay:true,
-				smartSpeed: 900,
+				autoplayTimeout:6000,
+				smartSpeed: 400,
 				onInitialized  : counter, 
                 onTranslated : counter,
 				responsive:{
@@ -225,7 +236,15 @@
             
                 if(item > items) {
                     item = item - items
+					
                 }
+				item === 0 ? item = 3 : '';
+
+				if (!!$('#mainVs').data('video-play')) {
+					$('#mainVs').data('video-play', false);
+					$('#mainVs').find('.video-wrap').removeClass('on');
+					$('#mainVs').find('.video-wrap').find('iframe').remove();
+				}
                 $('.main-visual-num').html('<b>'+ item +'</b><span> / '+ items +'</span>');
             }
 
