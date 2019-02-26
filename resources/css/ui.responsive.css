@@ -19,6 +19,8 @@
     .main-news .owl-carousel{padding-top:35px}
     .main-news .owl-carousel a{font-size:10px; font-weight:500; line-height: 15px; }
     .btn-base{width:100%}
+
+    .ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:10px; color:#a0a0a0; font-weight:600; line-height:1.2; letter-spacing: -0.07em; font-size:11px}
     
 }
 /* small handset landscape */ 
@@ -326,6 +328,42 @@
     .contact-info li{width:100%; height:40px;}
 
     .map-wrap{width:100%; background:#f5f5f5; height:630px; margin:60px 0 70px;}
+
+    .ui-tab.type-service{width:100%; text-align:center; margin:70px 0;}
+    .ui-tab.type-service .ui-tab-btns{text-align:center; font-size:0}
+    .ui-tab.type-service .ui-tab-btn{text-align:center;max-width:25%; min-width:25%; margin:0; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn > span{display:inline-block; width:140px; height:140px; border-radius:70px; background:transparent url(../img/content/ico_service.png) no-repeat 0 0; transition:background-color 0.3s ease-in}
+    .ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:30px; color:#a0a0a0; font-weight:600; line-height:1.2; font-size:20px; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn:hover,
+    .ui-tab.type-service .ui-tab-btn:focus,
+    .ui-tab.type-service .ui-tab-btn.selected{border:0 !important; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn.selected > span{background-color:#f2c200;}
+    .ui-tab.type-service .ui-tab-btn.selected > i{color:#1b1b1b}
+    .ui-tab.type-service .ui-tab-btn .icon-1{background-position:0 0}
+    .ui-tab.type-service .ui-tab-btn .icon-2{background-position:-140px 0}
+    .ui-tab.type-service .ui-tab-btn .icon-3{background-position:-280px 0}
+    .ui-tab.type-service .ui-tab-btn .icon-4{background-position:-420px 0}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-1{background-position:0 -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-2{background-position:-140px -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-3{background-position:-280px -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-4{background-position:-420px -140px}
+    .ui-tab.type-service .ui-tab-pnls{margin-top:80px;}
+    .ui-tab.type-service .ui-tab-pnl{background:#f7f7f7; font-size:20px; color:#1b1b1b; line-height:1.5; text-align: left; }
+
+    .service-tit{width:100%; height:auto; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:50px; }
+    .service-tit .ui-tab-tit{font-size:60px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
+    .service-tit p{margin-top:50px; letter-spacing: 1px; line-height:1.5; font-size:20px; color:#fff; font-weight:200;}
+    .service-tit .ui-tab-tit:after{content:""; display:inline-block; vertical-align: baseline; margin-left:20px; width:400px; height:6px; background:#f2c200;}
+    .service-ol{position:relative; top:0; background:#fff; width:100%; margin:0 auto; padding:30px 30px 10px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
+    .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:14px; letter-spacing:1px;}
+    .service-ol li{height:50px; width:100%;}
+    .service-ol em{font-size:12px; color:#f2c200; width:30px; display:inline-block; vertical-align:top; padding-top:0;}
+    .service-txt{width:100%; padding:50px; text-align: left; font-weight:200; font-size:20px;}
+    .service-txt p + p{margin-top:40px; letter-spacing:0}
+    .service-txt p br{display:none;}
+
+    .service-tit p br{display:block;}
+
 }
 
 
@@ -591,6 +629,41 @@
     .contact-info li{width:100%; height:40px;}
 
     .map-wrap{width:100%; background:#f5f5f5; height:630px; margin:60px 0 70px;}
+
+    .ui-tab.type-service{width:100%; text-align:center; margin:70px 0;}
+    .ui-tab.type-service .ui-tab-btns{text-align:center; font-size:0}
+    .ui-tab.type-service .ui-tab-btn{text-align:center;max-width:25%; min-width:25%; margin:0; letter-spacing: 1px; font-size:20px}
+    .ui-tab.type-service .ui-tab-btn > span{display:inline-block; width:140px; height:140px; border-radius:70px; background:transparent url(../img/content/ico_service.png) no-repeat 0 0; transition:background-color 0.3s ease-in}
+    .ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:30px; color:#a0a0a0; font-weight:600; line-height:1.2; font-size:20px; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn:hover,
+    .ui-tab.type-service .ui-tab-btn:focus,
+    .ui-tab.type-service .ui-tab-btn.selected{border:0 !important; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn.selected > span{background-color:#f2c200;}
+    .ui-tab.type-service .ui-tab-btn.selected > i{color:#1b1b1b}
+    .ui-tab.type-service .ui-tab-btn .icon-1{background-position:0 0}
+    .ui-tab.type-service .ui-tab-btn .icon-2{background-position:-140px 0}
+    .ui-tab.type-service .ui-tab-btn .icon-3{background-position:-280px 0}
+    .ui-tab.type-service .ui-tab-btn .icon-4{background-position:-420px 0}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-1{background-position:0 -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-2{background-position:-140px -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-3{background-position:-280px -140px}
+    .ui-tab.type-service .ui-tab-btn.selected .icon-4{background-position:-420px -140px}
+    .ui-tab.type-service .ui-tab-pnls{margin-top:80px;}
+    .ui-tab.type-service .ui-tab-pnl{background:#f7f7f7; font-size:20px; color:#1b1b1b; line-height:1.5; text-align: left; }
+
+    .service-tit{width:100%; height:600px; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:90px 90px 0; }
+    .service-tit .ui-tab-tit{font-size:70px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
+    .service-tit p{margin-top:50px; letter-spacing: 1px; line-height:1.5; font-size:26px; color:#fff; font-weight:200;}
+    .service-tit .ui-tab-tit:after{content:""; display:inline-block; vertical-align: baseline; margin-left:20px; width:400px; height:6px; background:#f2c200;}
+    .service-ol{position:relative; top:-90px; background:#fff; width:1220px; margin:0 auto; padding:40px 50px 30px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
+    .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:20px; letter-spacing:1px;}
+    .service-ol li{height:50px; width:100%;}
+    .service-ol em{font-size:12px; color:#f2c200; width:30px; display:inline-block; vertical-align:top; padding-top:4px;}
+    .service-txt{width:100%; padding:0 90px 90px; text-align: left; font-weight:200; font-size:20px; }
+    .service-txt p + p{margin-top:40px; letter-spacing:0}
+
+    .service-tit p br{display:block;}
+    .service-txt p br{display:block;}
 }
 
 /* width:320 */

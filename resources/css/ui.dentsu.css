@@ -257,7 +257,45 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 
 .m-block {display:block}
 
+.ui-tab.type-service{width:100%; text-align:center; margin:30px 0 0;}
+.ui-tab.type-service .ui-tab-btns{text-align:center; font-size:0}
+.ui-tab.type-service .ui-tab-btn{text-align:center;max-width:25%; min-width:25%; margin:0; letter-spacing: -1px}
+.ui-tab.type-service .ui-tab-btn > span{display:inline-block; width:70px; height:70px; border-radius:35px; background:transparent url(../img/content/ico_service.png) no-repeat 0 0; transition:background-color 0.3s ease-in; background-size:280px 140px}
+.ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:15px; color:#a0a0a0; font-weight:600; line-height:1.2; letter-spacing: -0.07em; font-size:14px}
+.ui-tab.type-service .ui-tab-btn:hover,
+.ui-tab.type-service .ui-tab-btn:focus,
+.ui-tab.type-service .ui-tab-btn.selected{border:0 !important; letter-spacing: 1px}
+.ui-tab.type-service .ui-tab-btn.selected > span{background-color:#f2c200;}
+.ui-tab.type-service .ui-tab-btn.selected > i{color:#1b1b1b}
+.ui-tab.type-service .ui-tab-btn .icon-1{background-position:0 0}
+.ui-tab.type-service .ui-tab-btn .icon-2{background-position:-70px 0}
+.ui-tab.type-service .ui-tab-btn .icon-3{background-position:-140px 0}
+.ui-tab.type-service .ui-tab-btn .icon-4{background-position:-210px 0}
+.ui-tab.type-service .ui-tab-btn.selected .icon-1{background-position:0 -70px}
+.ui-tab.type-service .ui-tab-btn.selected .icon-2{background-position:-70px -70px}
+.ui-tab.type-service .ui-tab-btn.selected .icon-3{background-position:-140px -70px}
+.ui-tab.type-service .ui-tab-btn.selected .icon-4{background-position:-210px -70px}
+.ui-tab.type-service .ui-tab-pnls{margin-top:40px;}
+.ui-tab.type-service .ui-tab-pnl{background:#f7f7f7; font-size:20px; color:#1b1b1b; line-height:1.5; text-align: left; }
 
+.service-tit{width:100%; height:auto; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:25px; }
+.service-tit .ui-tab-tit{font-size:30px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
+.service-tit p{margin-top:25px; letter-spacing: 1px; line-height:1.5; font-size:14px; color:#fff; font-weight:200;}
+
+.service-tit.n2{background-image:url(../img/content/bg_service2.jpg)}
+.service-tit.n3{background-image:url(../img/content/bg_service3.jpg)}
+.service-tit.n4{background-image:url(../img/content/bg_service4.jpg)}
+
+.service-tit .ui-tab-tit:after{content:""; display:inline-block; vertical-align: baseline; margin-left:10px; width:100px; height:3px; background:#f2c200;}
+.service-ol{position:relative; top:0; background:#fff; width:100%; margin:0 auto; padding:30px 30px 20px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
+.service-ol ol{vertical-align:top; display:inline-block; width:100%; font-size:14px; letter-spacing:1px;}
+.service-ol li{height:30px; width:100%;}
+.service-ol em{font-size:12px; color:#f2c200; width:20px; display:inline-block; vertical-align:top; padding-top:0;}
+.service-txt{width:100%; padding:25px; font-size:14px; text-align: left; font-weight:200; line-height:1.3}
+.service-txt p + p{margin-top:20px; letter-spacing: 1px}
+
+.service-tit p br{display:none;}
+.service-txt p br{display:none;}
 
 
 
