@@ -400,7 +400,7 @@
     .gnb-dep1 > li:nth-child(6) > a:focus{color:#f0991e}
 
     .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
-    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
+    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px; padding-left:0}
     .gnb-dep2 a:hover,
     .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
     .base-body{margin-top:190px; transition: margin 0.4s ease-in}

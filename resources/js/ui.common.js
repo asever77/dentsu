@@ -45,9 +45,17 @@
             var timer,
                 timer_m;
 
-            $('.gnb-dep1-btn').on('mouseover focus', function(){
+            $('.gnb-dep1-btn').on('mouseover focus', function(e){
                 clearTimeout(timer);
+
                 $('#baseHeader').addClass('on');
+            }).on('click', function(e){
+                if ($(this).next('ul').length) {
+                    e.preventDefault();
+                }
+                
+                $('.gnb-dep1 > li').removeClass('selected');
+                $(this).closest('li').addClass('selected');
             });
             $('.gnb-wrap').on('mouseleave blur', function(){
                 clearTimeout(timer);
