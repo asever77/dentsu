@@ -64,6 +64,7 @@
             function menuHide(){
                 timer = setTimeout(function(){
                     $('#baseHeader').removeClass('on');
+                    $('.gnb-dep1 > li').removeClass('selected');
                 },100);
             }
 

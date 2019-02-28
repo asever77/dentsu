@@ -357,12 +357,43 @@
     .service-ol{position:relative; top:0; background:#fff; width:100%; margin:0 auto; padding:30px 30px 10px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
     .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:14px; letter-spacing:1px;}
     .service-ol li{height:50px; width:100%;}
+    .service-ol li b{font-weight:600}
     .service-ol em{font-size:12px; color:#f2c200; width:30px; display:inline-block; vertical-align:top; padding-top:0;}
     .service-txt{width:100%; padding:50px; text-align: left; font-weight:200; font-size:20px;}
     .service-txt p + p{margin-top:40px; letter-spacing:0}
     .service-txt p br{display:none;}
-
     .service-tit p br{display:block;}
+
+    .about-visual{width:100%; height:500px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+    .about-visual .inner-wrap{padding:110px 90px 0; }
+    .about-visual .inner-wrap h2{color:#fff; font-size:60px; font-weight:500; line-height: 1.2}
+    .about-wrap{padding:130px 90px}
+    .about-text{position:relative; padding-left:25%; width:100%; font-size:20px; line-height:2; font-weight:200}
+    .about-text:before{content:""; display:block; width:20%; height:6px; background:#ff4d53; position: absolute; top:15px; left:0;}
+    .about-text br{display:none;}
+    .about-idea{margin-top:140px; width:100%; text-align:left; font-size:0;}
+    .about-idea dl{display:block; width:100%; font-size:18px; line-height:1.7; font-weight:200; text-align: left; margin-left:0; padding-left:220px; position:relative;min-height:200px; margin-bottom:50px}
+    .about-idea dt{font-size:48px; font-weight:700; letter-spacing:1px; line-height: 1.2; margin-bottom:20px;}
+    .about-idea dl br{display:none}
+    .about-idea dl:first-child{margin-left:0}
+    .about-idea dt:before{content:""; display:block; position:absolute; top:0; left:0; width:190px; height:190px; border-radius:95px; background:#ff4d53 url(../img/content/ico_overview.png) no-repeat 0 0; margin-bottom:65px;}
+    .about-idea .n1 dt:before{background-position:0 0}
+    .about-idea .n2 dt:before{background-position:-200px 0}
+    .about-idea .n3 dt:before{background-position:-400px 0}
+
+    .philosophy-list{width:100%; text-align:center; padding-bottom:80px;}
+    .philosophy-list dl{margin-top:80px;}
+    .philosophy-list dt{width:100%; font-size:30px;}
+    .philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:60px; letter-spacing:1px;}
+    .philosophy-list dt strong{display:inline-block;}
+    .philosophy-list dt span{display:inline-block; padding:0 30px;}
+    .philosophy-list dt strong:before,
+    .philosophy-list dt strong:after{content:""; display:inline-block; width:100px; height:6px; background:#ff4d53; vertical-align:middle}
+    .philosophy-list dd{margin-top:20px; font-size:16px; font-weight: 200;}
+    .philosophy-list dd strong{font-size:24px; font-weight: 400}
+    .philosophy-list dd strong b{font-weight: 600;}
+    .philosophy-list dd p{margin-top:25px;}
+    .philosophy-list dd p br{display:block}
 
 }
 
@@ -658,12 +689,43 @@
     .service-ol{position:relative; top:-90px; background:#fff; width:1220px; margin:0 auto; padding:40px 50px 30px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
     .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:20px; letter-spacing:1px;}
     .service-ol li{height:50px; width:100%;}
+    .service-ol li b{font-weight:600}
     .service-ol em{font-size:12px; color:#f2c200; width:30px; display:inline-block; vertical-align:top; padding-top:4px;}
     .service-txt{width:100%; padding:0 90px 90px; text-align: left; font-weight:200; font-size:20px; }
     .service-txt p + p{margin-top:40px; letter-spacing:0}
-
     .service-tit p br{display:block;}
     .service-txt p br{display:block;}
+
+    .about-visual{width:100%; height:650px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+    .about-visual .inner-wrap{padding:170px 90px 0; }
+    .about-visual .inner-wrap h2{color:#fff; font-size:60px; font-weight:500; line-height: 1.2}
+    .about-wrap{padding:130px 90px}
+    .about-text{position:relative; padding-left:40%; width:100%; font-size:20px; line-height:2; font-weight:200}
+    .about-text:before{content:""; display:block; width:30%; height:6px; background:#ff4d53; position: absolute; top:15px; left:0;}
+    .about-idea{margin-top:140px; width:100%; text-align:left; font-size:0;}
+    .about-idea dl{display:inline-block; width:340px; font-size:18px; line-height:1.7; font-weight:200; vertical-align: top; text-align: left; margin-left:100px; padding-left:0; margin-bottom:0}
+    .about-idea dt{font-size:48px; font-weight:700; letter-spacing:1px; line-height: 1.2; margin-bottom:40px;}
+    .about-idea dl:first-child{margin-left:0}
+    .about-idea dt:before{content:""; position:relative; display:block; width:190px; height:190px; border-radius:95px; background:#ff4d53 url(../img/content/ico_overview.png) no-repeat 0 0; margin-bottom:65px;}
+    .about-idea .n1 dt:before{background-position:0 0}
+    .about-idea .n2 dt:before{background-position:-200px 0}
+    .about-idea .n3 dt:before{background-position:-400px 0}
+    .about-text br{display:block;}
+    .about-idea dl br{display:block}
+
+    .philosophy-list{width:100%; text-align:center; padding-bottom:130px;}
+    .philosophy-list dl{margin-top:130px;}
+    .philosophy-list dt{width:100%; font-size:36px;}
+    .philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:80px; letter-spacing:1px;}
+    .philosophy-list dt strong{display:inline-block;}
+    .philosophy-list dt span{display:inline-block; padding:0 30px;}
+    .philosophy-list dt strong:before,
+    .philosophy-list dt strong:after{content:""; display:inline-block; width:100px; height:6px; background:#ff4d53; vertical-align:middle}
+    .philosophy-list dd{margin-top:35px; font-size:20px; font-weight: 200;}
+    .philosophy-list dd strong{font-size:24px; font-weight: 400}
+    .philosophy-list dd strong b{font-weight: 600;}
+    .philosophy-list dd p{margin-top:50px;}
+    .philosophy-list dd p br{display:block}
 }
 
 /* width:320 */

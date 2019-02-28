@@ -116,6 +116,7 @@
 
  /* Portfolio */
 .tit-wrap{width:100%; height:90px; text-align: center; color:#fff; font-size:20px; padding-top:30px; letter-spacing:2px; font-weight:600;}
+.tit-wrap.type-about{background:#ff3f44; background:url(../img/content/topbg_about.jpg) repeat 50% 0; background-size:cover}
 .tit-wrap.type-business{background:#f2c200; background:url(../img/content/topbg_business.jpg) repeat 50% 0; background-size:cover}
 .tit-wrap.type-portfolio{background:#5f32b7; background:url(../img/content/topbg_portfolio.jpg) repeat 50% 0; background-size:cover}
 .tit-wrap.type-news{background:#353ed5; background:url(../img/content/topbg_news.jpg) repeat 50% 0; background-size:cover}
@@ -299,10 +300,35 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 .service-tit p br{display:none;}
 .service-txt p br{display:none;}
 
+.about-visual{width:100%; height:250px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+.about-visual .inner-wrap{padding:50px 25px 0; }
+.about-visual .inner-wrap h2{color:#fff; font-size:30px; font-weight:500; line-height: 1.2}
+.about-wrap{padding:60px 25px}
+.about-text{position:relative; padding-left:0; width:100%; font-size:16px; line-height:2; font-weight:200}
+.about-text:before{content:""; display:block; width:10%; height:6px; background:#ff4d53; position: absolute; top:-15px; left:0;}
 
+.about-idea{margin-top:70px; width:100%; text-align:left; font-size:0;}
+.about-idea dl{display:block; width:100%; font-size:14px; line-height:1.7; font-weight:200; text-align: left; margin-left:0; padding-left:120px; position:relative;min-height:100px; margin-bottom:30px}
+.about-idea dt{font-size:24px; font-weight:700; letter-spacing:1px; line-height: 1.2; margin-bottom:10px;}
+.about-text br{display:none;}
+.about-idea dl br{display:none}
+.about-idea dl:first-child{margin-left:0}
+.about-idea dt:before{content:""; display:block; position:absolute; top:0; left:0; width:95px; height:95px; border-radius:50%; background:#ff4d53 url(../img/content/ico_overview.png) no-repeat 0 0; background-size:300px 95px; margin-bottom:0px;}
+.about-idea .n1 dt:before{background-position:0 0}
+.about-idea .n2 dt:before{background-position:-100px 0}
+.about-idea .n3 dt:before{background-position:-200px 0}
 
-
-
-
-
+.philosophy-list{width:100%; text-align:center; padding:0 25px 40px; word-break: keep-all}
+.philosophy-list dl{margin-top:40px;}
+.philosophy-list dt{width:100%; font-size:18px;}
+.philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:30px; letter-spacing:1px;}
+.philosophy-list dt strong{display:inline-block;}
+.philosophy-list dt span{display:inline-block; padding:0 15px;}
+.philosophy-list dt strong:before,
+.philosophy-list dt strong:after{content:""; display:inline-block; width:50px; height:3px; background:#ff4d53; vertical-align:middle}
+.philosophy-list dd{margin-top:10px; font-size:16px; font-weight: 200;}
+.philosophy-list dd strong{font-size:18px; font-weight: 400}
+.philosophy-list dd strong b{font-weight: 600;}
+.philosophy-list dd p{margin-top:15px;}
+.philosophy-list dd p br{display:none}
 
