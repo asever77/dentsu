@@ -39,6 +39,7 @@
 .main-wrap:after{content:""; display:block; clear:both}
 .main-row{float:left; width:100%;}
 .main-visual{float:left; width:100%; position: relative;}
+.main-visual .owl-item button{display:block}
 .main-pof,
 .main-img{float:left; width:33.3333%}
 .main-pof img,
