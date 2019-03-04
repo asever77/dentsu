@@ -79,6 +79,7 @@
 .main-visual .owl-dots{display:none}
 
 .square-0 a {display:block}
+.square-0 button {vertical-align:top}
 .square-0 a video {position:absolute;top:-6.25%;left:0;right:0}
 
 /* [class*="square-"]{ transition:all 0.3s ease-in} */
