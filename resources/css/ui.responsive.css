@@ -475,7 +475,7 @@
     .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
     .main-wrap{height:1120px}
     [class*="square-"]{position:absolute;}
-    .square-0{top:0; left:0}
+    .square-0{top:0; left:0; height:560px}
     .square-1{top:0; left:1120px; z-index: 1;}
     .square-2{top:280px; left:1120px; z-index: 1;}
     .square-3{top:560px; left:1120px; z-index: 1;}
