@@ -508,9 +508,9 @@
     .main-visual-num b {font-size:45px; color:#fff; font-weight: 600}
     .main-visual .owl-carousel .owl-nav .owl-prev{width:100px; height:100px; background:url(../img/common/btn_prev.png) no-repeat 0 0; position: absolute; top:50%; left:0; z-index: 10; margin-top:-50px;}
     .main-visual .owl-carousel .owl-nav .owl-next{width:100px; height:100px; background:url(../img/common/btn_next.png) no-repeat 0 0; position: absolute; top:50%; right:0; z-index: 10; margin-top:-50px;}
-    .owl-carousel.owl-loaded {overflow:hidden}
-    /*.owl-carousel.owl-drag .owl-item video {opacity:0}
-    .owl-carousel.owl-drag .owl-item.active video {opacity:1}*/
+	.ie .main-visual .owl-carousel.owl-drag .owl-item video {opacity:0}
+	.ie .main-visual .owl-carousel.owl-drag .owl-item.active video {opacity:1}
+	.ie .main-visual .owl-item {height:560px;;background-color:rgba(0,0,0,.75)}
 
 
     .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: left; color:#fff; font-size:14px; line-height:20px; }
