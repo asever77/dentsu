@@ -471,7 +471,7 @@
 
     .main-square h3{position:absolute; font-size:23px; letter-spacing:0.05em; padding:20px 30px 0; font-weight: 600; z-index:10;}
     .main-news .owl-carousel{padding-top:80px;}
-    .main-news .owl-carousel a{display:block; width:100%; font-size:20px; color:#fff; font-weight:400; letter-spacing: 0; word-break: keep-all; line-height: 32px; padding:0 30px;}
+    .main-news .owl-carousel a{display:block; width:100%; font-size:20px; color:#fff; font-weight:400; letter-spacing: 0; word-break: break-all !important; line-height: 32px; padding:0 30px;max-height:128px;overflow:hidden}
     .main-news .owl-carousel .news-date{display:block; font-size:12px; font-weight: 100; padding:0 30px; color:#fff; margin-bottom:10px; opacity:0.6; letter-spacing: 1px}
     .main-wrap{height:1120px}
     [class*="square-"]{position:absolute;}
@@ -508,6 +508,9 @@
     .main-visual-num b {font-size:45px; color:#fff; font-weight: 600}
     .main-visual .owl-carousel .owl-nav .owl-prev{width:100px; height:100px; background:url(../img/common/btn_prev.png) no-repeat 0 0; position: absolute; top:50%; left:0; z-index: 10; margin-top:-50px;}
     .main-visual .owl-carousel .owl-nav .owl-next{width:100px; height:100px; background:url(../img/common/btn_next.png) no-repeat 0 0; position: absolute; top:50%; right:0; z-index: 10; margin-top:-50px;}
+    .owl-carousel.owl-loaded {overflow:hidden}
+    /*.owl-carousel.owl-drag .owl-item video {opacity:0}
+    .owl-carousel.owl-drag .owl-item.active video {opacity:1}*/
 
 
     .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: left; color:#fff; font-size:14px; line-height:20px; }
