@@ -402,23 +402,23 @@
 @media all and (min-width:1400px) {
     .ui-d body:after{content:"desktop"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
 
-    .base-header{min-height:190px; transition:min-height 0.2s; overflow:hidden; box-shadow: none}
-    .header-wrap{width:100%; max-width:1400px; height:190px; transition:height 0.2s}
-    .header-wrap .logo{left:50%; margin-left:-124px; top:48px; z-index:101; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
+    .base-header{min-height:160px; transition:min-height 0.2s; overflow:hidden; box-shadow: none}
+    .header-wrap{width:100%; max-width:1400px; height:160px; transition:height 0.2s}
+    .header-wrap .logo{left:50%; margin-left:-124px; top:38px; z-index:101; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
 
     .base-header.on{min-height:280px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
     .base-header.on .gnb-dep2{display:block; position:absolute;}
     /* .gnb-bg{position: absolute; bottom:-190px; left:0; width:100%; min-height:190px; background:red} */
 
-    .util-menu{position: absolute; top:48px; right:9px; overflow: hidden; display:block; opacity: 1;}
+    .util-menu{position: absolute; top:38px; right:9px; overflow: hidden; display:block; opacity: 1;}
     .util-menu a{display:block; float:left}
     .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
     .btn-facebook{width:30px; height:30px; background:url(../img/common/ico_facebook.png) no-repeat; margin-left:17px}
 
-    .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
+    .gnb-wrap{display:block; width:100%; position: absolute; top:109px; transition:top 0.2s; right:0; padding:0; height:auto;}
     .gnb-dep1{width:100%; text-align:center; padding-bottom:40px;}
     .gnb-dep1 > li{display:inline-block; position: relative; transition:all 0.15s}
-    .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:16px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
+    .gnb-dep1 > li > a{display:block; padding:0 50px; font-size:18px; letter-spacing:1px; color:#1b1b1b; text-decoration:none; font-weight:600}
     .gnb-dep1 > li > a:hover,
     .gnb-dep1 > li > a:focus{color:red}
     .gnb-dep1 > li:nth-child(2) > a:hover,
@@ -434,7 +434,7 @@
     .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px; padding-left:0}
     .gnb-dep2 a:hover,
     .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
-    .base-body{margin-top:190px; transition: margin 0.4s ease-in}
+    .base-body{margin-top:160px; transition: margin 0.4s ease-in}
     .gnb-wrap .btn-close,
     .header-wrap .btn-menu{display:none}
 
@@ -522,7 +522,7 @@
     .inner-wrap{width:100%; max-width:1400px; margin:0 auto;}
 
     /* Portfolio */
-     .tit-wrap{width:100%; height:200px; text-align: center; color:#fff; font-size:40px; padding-top:70px; letter-spacing:2px; font-weight:600;}
+     .tit-wrap{width:100%; height:140px; text-align: center; color:#fff; font-size:40px; padding-top:40px; letter-spacing:2px; font-weight:600;}
  
     .ui-tab-btns{width:100%; text-align: left}
     .ui-tab-btn{padding:10px 8px 5px; min-height:40px; border-left:0; font-size:20px; margin:0 25px; font-weight: 200; letter-spacing: 2px; outline:none; color:#1b1b1b;}
@@ -568,8 +568,8 @@
     .type-news .list-item{clear:both}
 
     .item-view{background:#f5e9d6;padding-bottom:70px}
-    .item-view-head{background-size:cover; padding-bottom:33%; background-position:50% 0; min-height:650px}
-    .item-view-head h2{position:absolute; display:block; top:0; padding-top:280px; font-size:40px; width:100%; text-align: center; color:#fff; line-height: 1.5; font-weight:100}
+    .item-view-head{background-size:cover; padding-bottom:33%; background-position:50% 0; min-height:480px}
+    .item-view-head h2{position:absolute; display:block; top:0; padding-top:200px; font-size:40px; width:100%; text-align: center; color:#fff; line-height: 1.5; font-weight:100}
     .item-view-head h2 strong{font-weight:700}
     .item-view-body{position:relative; max-width:1400px; width:100%; margin:0 auto; background:#fff; padding:50px 90px; margin-top:-130px; min-height:500px; box-shadow: 0 5px 20px rgba(0,0,0,0.2)}
     .type-news .item-view-body{margin-top:0}
@@ -606,7 +606,7 @@
 
     .item-view-cont{position:relative; width:100%; text-align:center; padding:0 0 100px; font-size:30px}
 
-    .item-view-link{position:relative; width:100%; padding:80px 0; border-top:1px solid #eee; text-align:center; }
+    .item-view-link{position:relative; width:100%; padding:100px 0; border-top:1px solid #eee; text-align:center; }
     .item-view-link .tit{position:absolute; top:-12px; left:50%; display:block; text-align:center; background:#fff; font-size:14px; letter-spacing: 1px; font-weight: 600; margin-left:-45px; width:90px}
     .item-view-link a{display:inline-block; font-size:20px; color:#1b1b1b; letter-spacing: 1px}
     .item-view-link a > *{display:inline-block; width:100%; }
@@ -616,7 +616,7 @@
 
     .item-view-cont .view-move,
     .item-view-cont .view-img,
-    .item-view-cont .view-txt{width:100%; font-size:30px; line-height:1.6; font-weight: 200; margin-top:140px}
+    .item-view-cont .view-txt{width:100%; font-size:30px; line-height:1.6; font-weight: 200; margin-top:90px}
     .item-view-cont .view-txt strong{font-weight: 700}
     .item-view-cont .view-txt dl{font-size:22px; margin-top:30px}
     .item-view-cont .view-txt dl + dl{ margin-top:30px}
@@ -664,11 +664,11 @@
 
     .map-wrap{width:100%; background:#f5f5f5; height:630px; margin:60px 0 70px;}
 
-    .ui-tab.type-service{width:100%; text-align:center; margin:70px 0;}
+    .ui-tab.type-service{width:100%; text-align:center; margin:30px 0;}
     .ui-tab.type-service .ui-tab-btns{text-align:center; font-size:0}
     .ui-tab.type-service .ui-tab-btn{text-align:center;max-width:25%; min-width:25%; margin:0; letter-spacing: 1px; font-size:20px}
     .ui-tab.type-service .ui-tab-btn > span{display:inline-block; width:140px; height:140px; border-radius:70px; background:transparent url(../img/content/ico_service.png) no-repeat 0 0; transition:background-color 0.3s ease-in}
-    .ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:30px; color:#a0a0a0; font-weight:600; line-height:1.2; font-size:20px; letter-spacing: 1px}
+    .ui-tab.type-service .ui-tab-btn i{display:inline-block; width:100%; margin-top:15px; color:#a0a0a0; font-weight:600; line-height:1.2; font-size:20px; letter-spacing: 1px}
     .ui-tab.type-service .ui-tab-btn:hover,
     .ui-tab.type-service .ui-tab-btn:focus,
     .ui-tab.type-service .ui-tab-btn.selected{border:0 !important; letter-spacing: 1px}
@@ -682,34 +682,34 @@
     .ui-tab.type-service .ui-tab-btn.selected .icon-2{background-position:-140px -140px}
     .ui-tab.type-service .ui-tab-btn.selected .icon-3{background-position:-280px -140px}
     .ui-tab.type-service .ui-tab-btn.selected .icon-4{background-position:-420px -140px}
-    .ui-tab.type-service .ui-tab-pnls{margin-top:80px;}
+    .ui-tab.type-service .ui-tab-pnls{margin-top:30px;}
     .ui-tab.type-service .ui-tab-pnl{background:#f7f7f7; font-size:20px; color:#1b1b1b; line-height:1.5; text-align: left; }
 
-    .service-tit{width:100%; height:600px; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:90px 90px 0; }
-    .service-tit .ui-tab-tit{font-size:70px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
-    .service-tit p{margin-top:50px; letter-spacing: 1px; line-height:1.5; font-size:26px; color:#fff; font-weight:200;}
+    .service-tit{width:100%; height:530px; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:90px 90px 0; }
+    .service-tit .ui-tab-tit{font-size:60px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
+    .service-tit p{margin-top:50px; letter-spacing: 1px; line-height:1.5; font-size:24px; color:#fff; font-weight:200;}
     .service-tit .ui-tab-tit:after{content:""; display:inline-block; vertical-align: baseline; margin-left:20px; width:400px; height:6px; background:#f2c200;}
-    .service-ol{position:relative; top:-90px; background:#fff; width:1220px; margin:0 auto; padding:40px 50px 30px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
+    .service-ol{position:relative; top:-60px; background:#fff; width:1220px; margin:0 auto; padding:40px 50px 30px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
     .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:20px; letter-spacing:1px;}
     .service-ol li{height:50px; width:100%;}
     .service-ol li b{font-weight:600}
     .service-ol em{font-size:12px; color:#f2c200; width:30px; display:inline-block; vertical-align:top; padding-top:4px;}
-    .service-txt{width:100%; padding:0 90px 90px; text-align: left; font-weight:200; font-size:20px; }
+    .service-txt{width:100%; padding:0 90px 60px; text-align: left; font-weight:200; font-size:18px; }
     .service-txt p + p{margin-top:40px; letter-spacing:0}
     .service-tit p br{display:block;}
     .service-txt p br{display:block;}
 
-    .about-visual{width:100%; height:650px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
-    .about-visual .inner-wrap{padding:170px 90px 0; }
-    .about-visual .inner-wrap h2{color:#fff; font-size:60px; font-weight:500; line-height: 1.2}
-    .about-wrap{padding:130px 90px}
+    .about-visual{width:100%; height:480px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+    .about-visual .inner-wrap{padding:120px 90px 0; }
+    .about-visual .inner-wrap h2{color:#fff; font-size:50px; font-weight:500; line-height: 1.2}
+    .about-wrap{padding:100px 90px}
     .about-text{position:relative; padding-left:40%; width:100%; font-size:20px; line-height:2; font-weight:200}
     .about-text:before{content:""; display:block; width:30%; height:6px; background:#ff4d53; position: absolute; top:15px; left:0;}
-    .about-idea{margin-top:140px; width:100%; text-align:left; font-size:0;}
+    .about-idea{margin-top:90px; width:100%; text-align:left; font-size:0;}
     .about-idea dl{display:inline-block; width:340px; font-size:18px; line-height:1.7; font-weight:200; vertical-align: top; text-align: left; margin-left:100px; padding-left:0; margin-bottom:0}
-    .about-idea dt{font-size:48px; font-weight:700; letter-spacing:1px; line-height: 1.2; margin-bottom:40px;}
+    .about-idea dt{font-size:48px; font-weight:700; letter-spacing:1px; line-height: 1.2; margin-bottom:30px;}
     .about-idea dl:first-child{margin-left:0}
-    .about-idea dt:before{content:""; position:relative; display:block; width:190px; height:190px; border-radius:95px; background:#ff4d53 url(../img/content/ico_overview.png) no-repeat 0 0; margin-bottom:65px;}
+    .about-idea dt:before{content:""; position:relative; display:block; width:190px; height:190px; border-radius:95px; background:#ff4d53 url(../img/content/ico_overview.png) no-repeat 0 0; margin-bottom:35px;}
     .about-idea .n1 dt:before{background-position:0 0}
     .about-idea .n2 dt:before{background-position:-200px 0}
     .about-idea .n3 dt:before{background-position:-400px 0}
@@ -717,17 +717,18 @@
     .about-idea dl br{display:block}
 
     .philosophy-list{width:100%; text-align:center; padding-bottom:130px;}
-    .philosophy-list dl{margin-top:130px;}
+    .philosophy-list dl{margin-top:90px; position:relative}
+    .philosophy-list dl:before{content:""; display:block; position: absolute; top:-30px; left:50%; margin-left:-35px; width:70px; height:1px; background:#e5e5e5;}
     .philosophy-list dt{width:100%; font-size:36px;}
-    .philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:80px; letter-spacing:1px;}
+    .philosophy-list dt em{width:100%; display:inline-block; color:#ff4d53; font-size:50px; letter-spacing:0.15em; font-weight:700; margin-bottom:10px}
     .philosophy-list dt strong{display:inline-block;}
     .philosophy-list dt span{display:inline-block; padding:0 30px;}
-    .philosophy-list dt strong:before,
-    .philosophy-list dt strong:after{content:""; display:inline-block; width:100px; height:6px; background:#ff4d53; vertical-align:middle}
+   
     .philosophy-list dd{margin-top:35px; font-size:20px; font-weight: 200;}
     .philosophy-list dd strong{font-size:24px; font-weight: 400}
-    .philosophy-list dd strong b{font-weight: 600;}
-    .philosophy-list dd p{margin-top:50px;}
+    .philosophy-list dd strong b{font-weight: 600; position:relative; display:inline-block;}
+    .philosophy-list dd strong b:after{content:""; display:block; width:calc(100% - 20px); left:10px; height:8px; background:#ff4d53; position:absolute; bottom:3px; z-index:-1}
+    .philosophy-list dd p{margin-top:25px; font-size:18px; letter-spacing: 0; font-weight:200}
     .philosophy-list dd p br{display:block}
 }
 
