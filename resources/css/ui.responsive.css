@@ -5,8 +5,6 @@
 /* colunns 4 / gutters 16 ---------------- */
 /* handset */ 
 @media all and (max-width:599px) and (orientation:portrait) {
-    body:after{content:"handset"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
-
     .item-view-cont .view-txt br{display:none}
     .btn-base{width:100%}
 
@@ -14,8 +12,6 @@
 }
 /* small handset */ 
 @media all and (max-width:359px) {
-    body:after{content:"small handset"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
-
     .main-news .owl-carousel{padding-top:35px}
     .main-news .owl-carousel a{font-size:10px; font-weight:500; line-height: 15px; }
     .btn-base{width:100%}
@@ -25,8 +21,6 @@
 }
 /* small handset landscape */ 
 @media all and (max-width:599px) and (orientation:landscape) { 
-    body:after{content:"small handset landscape"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
-
     .btn-base{width:100%}
     
 }
@@ -34,19 +28,17 @@
 /* colunns 8 / gutters 16 ---------------- */
 /* tablet & handset landscape */ 
 @media all and (max-width:959px) and (orientation:landscape) { 
-    body:after{content:"tablet & handset landscape"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
+
 }
 /* tablet  */ 
 @media all and (min-width:600px) and (max-width:1112px) and (orientation:portrait) {
-    body:after{content:"tablet"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
+
 }
 
 
 /* colunns 12 / gutters 24  ---------------- */
 /* tablet landscape */ 
 @media all and (min-width:960px) and (max-width:1439px) and (orientation:landscape) {
-    body:after{content:"tablet landscape"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
-
     .base-footer{width:100%; margin:0 auto; padding:25px 0; background:#1b1b1b; text-align: center; color:#fff; font-size:14px; line-height:20px; }
     .footer-wrap{width:100%; max-width:1120px; max-width:1120px; margin:0 auto; overflow: hidden}
     .base-footer address{font-style:normal; letter-spacing:1px; font-weight: 200;}
@@ -77,7 +69,6 @@
     .gnb-dep1 > li:nth-child(6) > a:hover,
     .gnb-dep1 > li:nth-child(6) > a:focus{color:#f0991e}
     
-
     .util-menu{position: absolute; top:48px; right:9px; overflow: hidden;display:block; opacity: 1;}
     .util-menu a{display:block; float:left}
     .btn-search{width:30px; height:30px; background:url(../img/common/ico_search.png) no-repeat}
@@ -400,8 +391,6 @@
 
 /* desktop */ 
 @media all and (min-width:1400px) {
-    .ui-d body:after{content:"desktop"; display:block; position:fixed; bottom:0; right:0; padding:5px; background:#000; color:#fff; font-size:12px; z-index:1000; opacity:0.5}
-
     .base-header{min-height:160px; transition:min-height 0.2s; overflow:hidden; box-shadow: none}
     .header-wrap{width:100%; max-width:1400px; height:160px; transition:height 0.2s}
     .header-wrap .logo{left:50%; margin-left:-124px; top:38px; z-index:101; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s ease-in}
