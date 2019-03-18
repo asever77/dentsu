@@ -336,3 +336,11 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 .philosophy-list dd p{margin-top:15px;}
 .philosophy-list dd p br{display:none}
 
+.fadeinup {opacity:.05;
+	-webkit-transition:opacity .3s ease-in-out;
+	-moz-transition:opacity .3s ease-in-out;
+	-o-transition:opacity .3s ease-in-out;
+	-ms-transition:opacity .3s ease-in-out;
+	transition:opacity .3s ease-in-out;
+}
+.fadeinup.active {opacity:1}
