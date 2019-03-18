@@ -84,7 +84,7 @@
 
     .gnb-wrap .btn-close,
     .header-wrap .btn-menu{display:none}
-
+        
     .type-mini .base-header.on{min-height:190px;}
     .type-mini .gnb-dep2{padding-bottom:40px}
     .type-mini .header-wrap{height:50px}
@@ -96,7 +96,7 @@
     .type-mini .gnb-dep1 > li > a{padding:0 17px; font-size:16px; }
     .type-mini .util-menu{top:8px}
     .type-mini .base-body{margin-top:50px;}
-
+/*
     .ui-m .base-header{position:fixed; width:100%; top:0; left:0; min-height:50px; background:#fff; z-index:10}
     .ui-m .header-wrap{width:100%; height:100%; margin:0 auto; position:relative;}
     .ui-m .header-wrap .logo{position:absolute; left:15px; top:19px; width:106px; height:12px; background:url(../img/common/logo_m.png) no-repeat 0 0; background-size:cover; margin-left:0;}
@@ -120,7 +120,7 @@
     .ui-m .gnb-wrap .btn-close,
     .ui-m .header-wrap .btn-menu{display:block}
     .ui-m .gnb-dep1 > li {width:100%; display:block; text-align: left;}
-
+*/
     /* main */
     .main-wrap{position:relative; width:100%; max-width:1120px; min-width:1120px; margin:0 auto; }
     .main-wrap:after{content:""; display:block; clear:both}
@@ -688,6 +688,8 @@
     .service-txt p + p{margin-top:40px; letter-spacing:0}
     .service-tit p br{display:block;}
     .service-txt p br{display:block;}
+    .service-ol.fadeinup.active {opacity:1; top:-60px}
+    .service-txt.fadeinup.active {opacity:1; top:0}
 
     .about-visual{width:100%; height:480px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
     .about-visual .inner-wrap{padding:120px 90px 0; }
@@ -720,6 +722,15 @@
     .philosophy-list dd strong b:after{content:""; display:block; width:calc(100% - 20px); left:10px; height:8px; background:#ff4d53; position:absolute; bottom:3px; z-index:-1}
     .philosophy-list dd p{margin-top:25px; font-size:18px; letter-spacing: 0; font-weight:200}
     .philosophy-list dd p br{display:block}
+
+    .fadeinup {opacity:0; top:100px; position:relative; 
+        -webkit-transition:opacity .5s ease-in-out, top .3s ease-in-out;
+        -moz-transition:opacity .5s ease-in-out, top .3s ease-in-out;
+        -o-transition:opacity .5s ease-in-out, top .3s ease-in-out;
+        -ms-transition:opacity .5s ease-in-out, top .3s ease-in-out;
+        transition:opacity .5s ease-in-out, top .3s ease-in-out;
+    }
+    .fadeinup.active {opacity:1; top:0}
 }
 
 /* width:320 */
