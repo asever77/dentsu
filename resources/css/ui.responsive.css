@@ -192,8 +192,13 @@
     .list-item:after{content:""; display:block; clear:both}
     .list-item li{float:left; width:calc(50% - 10px); position: relative;}
     .list-item li:nth-child(2n){float:right}
-    .list-item-img{ width:100%; position: relative; overflow: hidden; background:#000; }
-    .list-item-img img{display:block;width:100%; transition:opacity 0.3s ease-in}
+	.list-item li:nth-child(2n+1) {clear:both}
+    /*.list-item-img{ width:100%; position: relative; overflow: hidden; background:#000; }
+    .list-item-img img{display:block;width:100%; transition:opacity 0.3s ease-in}*/
+	.list-item-img{ width:100%; position: relative; padding-top:50%; overflow: hidden; background:#000}
+	.list-item-img img {position:absolute;top:50%;left:0; display:block;width:100%; transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transition:opacity 0.3s ease-in}
+
+
     .list-item li:hover .list-item-img img{opacity:0.5}
     .list-item li:hover .list-item-sns{opacity:1}
     .list-item-sns{position: absolute; opacity:0; top:0; left:0; width:100%; margin-top:23%; text-align:center; transition:opacity 0.3s ease-in}
@@ -524,8 +529,9 @@
     .list-item:after{content:""; display:block; clear:both}
     .list-item li{float:left; width:660px; position: relative; padding-bottom:60px}
     .list-item li:nth-child(2n){float:right}
-    .list-item-img{ width:auto; position: relative; overflow: hidden; background:#000; }
-    .list-item-img img{display:block;width:100%; transition:opacity 0.3s ease-in}
+	.list-item li:nth-child(2n+1) {clear:both}
+    .list-item-img{ width:auto; position: relative; padding-top:50%; overflow: hidden; background:#000}
+    .list-item-img img {position:absolute;top:50%;left:0; display:block;width:100%; transform:translateY(-50%);-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transition:opacity 0.3s ease-in}
     .list-item li:hover .list-item-img img{opacity:0.5}
     .list-item li:hover .list-item-sns{opacity:1}
     .list-item-sns{position: absolute; opacity:0; top:0; left:0; width:100%; margin-top:23%; text-align:center; transition:opacity 0.3s ease-in}
