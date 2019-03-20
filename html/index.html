@@ -34,14 +34,45 @@
 					<div class="main-visual square-0">
 						<div class="owl-carousel owl-theme" id="mainVs">
 							<div class="item">
-								<a href="#"><img src="../resources/img/dummy/@vs_1.jpg" alt="" ></a>
+								<a href="#">
+									<img src="../resources/img/dummy/@vs_1.jpg" alt="" >
+									<div class="main-visual-txt">
+										<em>2018 - LEXUS TV CF 1</em>
+										<strong>NEW GENERATION ES 300h</strong>
+									</div>
+								</a>
 							</div>
 							<div class="item">
 								<button type="button" data-video="https://www.youtube.com/embed/QbLL6xKknzg?autoplay=1&amp;enablejsapi=1&amp;showinfo=0&amp;rel=0" class="btn-video"><img src="../resources/img/dummy/@vs_2.jpg" alt="" ></button>
 								<div class="video-wrap"></div>
 							</div>
 							<div class="item">
-								<a href="#"><img src="../resources/img/dummy/@vs_3.jpg"  alt=""></a>
+								<video poster="" width="100%" controls="false" autoplay muted loop>
+									<source src="../resources/file/1551351572_SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+								</video>
+								<div class="main-visual-txt">
+									<em>2018 - LEXUS TV CF 3</em>
+									<strong>NEW GENERATION ES 300h</strong>
+								</div>
+							</div>
+							<div class="item">
+								<video poster="" width="100%" controls="false" autoplay muted loop>
+									<source src="../resources/file/1551351572_SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+								</video>
+								<div class="main-visual-txt">
+									<em>2018 - LEXUS TV CF 4</em>
+									<strong>NEW GENERATION ES 300h</strong>
+								</div>
+							</div>
+							
+							<div class="item">
+								<a href="#">
+									<img src="../resources/img/dummy/@vs_3.jpg"  alt="">
+									<div class="main-visual-txt">
+										<em>2018 - LEXUS TV CF 5</em>
+										<strong>NEW GENERATION ES 300h</strong>
+									</div>
+								</a>
 							</div>
 
 						</div>
@@ -56,7 +87,8 @@
 							<div class="owl-carousel owl-theme" id="mPof1-1">
 								<div class="item">
 									<a href="#"><img src="../resources/img/dummy/@pf_1_m.jpg"
-							dsrc="../resources/img/dummy/@pf_1.jpg" msrc="../resources/img/dummy/@pf_1_m.jpg" alt=""></a>
+							dsrc="../resources/img/dummy/@pf_1.jpg" msrc="../resources/img/dummy/@pf_1_m.jpg" alt="">
+									</a>
 								</div>
 								<div class="item">
 									<a href="#"><img src="../resources/img/dummy/@pf_1_m.jpg"
@@ -203,6 +235,7 @@
 				var html_video = '<iframe width="100%" height="100%" id="vod-iframe" src="'+ v +'"  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen ></iframe>';
 				t.next('.video-wrap').html(html_video);
 			}
+
 			$('#mainVs').on('mouseover', function(){
 				$(this).trigger('stop.owl.autoplay');
 			}).on('mouseleave', function(){
@@ -211,15 +244,18 @@
 				}
 				
 			});
-
+			
+			var slide_autoplay_time = 7000,
+				slide_speed = 400;
 
 			$('#mainVs').owlCarousel({
 				loop:true,
 				margin:0,
 				nav:true,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 400,
+				autoHeight:true,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				onInitialized  : counter, 
                 onTranslated : counter,
 				responsive:{
@@ -236,9 +272,8 @@
             
                 if(item > items) {
                     item = item - items
-					
                 }
-				item === 0 ? item = 3 : '';
+				item === 0 ? item = items : '';
 
 				if (!!$('#mainVs').data('video-play')) {
 					$('#mainVs').data('video-play', false);
@@ -253,8 +288,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1
@@ -266,8 +301,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1
@@ -279,8 +314,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1
@@ -292,8 +327,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1
@@ -305,8 +340,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:6000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1
@@ -318,8 +353,8 @@
 				margin:0,
 				nav:false,
 				autoplay:true,
-				autoplayTimeout:7000,
-				smartSpeed: 900,
+				autoplayTimeout:slide_autoplay_time,
+				smartSpeed: slide_speed,
 				responsive:{
 					0:{
 						items:1

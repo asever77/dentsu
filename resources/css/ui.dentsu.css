@@ -113,11 +113,16 @@
 
 .main-visual .owl-carousel .owl-nav .owl-prev{width:50px; height:50px; background:url(../img/common/btn_prev.png) no-repeat 0 0; background-size:cover; position: absolute; top:50%; left:0; z-index: 10; margin-top:-25px;}
 .main-visual .owl-carousel .owl-nav .owl-next{width:50px; height:50px; background:url(../img/common/btn_next.png) no-repeat 0 0; background-size:cover; position: absolute; top:50%; right:0; z-index: 10; margin-top:-25px;}
+.main-visual .owl-carousel.owl-drag .owl-item{height:100%}
 .main-visual .owl-carousel .item .video-wrap{position: absolute; top:0; left:0; width:100%; height:100%; z-index:-1;}
 .main-visual .owl-carousel .item .video-wrap.on{z-index:1}
+.main-visual .owl-carousel .item video{display:block;}
+.main-visual .owl-carousel .item img{height:100%;}
 /* [class*="square-"] > a{transform-style: preserve-3d; transition: transform 1s ease;}
 [class*="square-"] > a:hover{position:relative; transform:rotateY(180deg); z-index: 100} */
-
+.main-visual-txt{position:absolute; bottom:15px; left:25px;}
+.main-visual-txt em{display:block; color:#fff; font-size:2.5vw; font-weight:500}
+.main-visual-txt strong{display:block; color:#fff; font-size:4vw; font-weight:700}
 
  /* Portfolio */
 .tit-wrap{width:100%; height:90px; text-align: center; color:#fff; font-size:20px; padding-top:30px; letter-spacing:2px; font-weight:600;}
@@ -171,9 +176,9 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 .search-wrap input{border:0; width:100%; padding-right:30px; background:transparent; outline:0}
 .search-wrap .btn-search{position: absolute; top:7px; right:5px;}
 
-.item-view{background:#f5e9d6;padding-bottom:0}
-.item-view-head{background-size:cover; padding-bottom:0; background-position:50% 0; min-height:180px}
-.item-view-head h2{position:relative; display:block; top:0; padding-top:80px; font-size:20px; width:100%; text-align: center; color:#fff; line-height: 1.5; font-weight:100}
+.item-view{background:#f5e9d6;padding-bottom:0; background-size:contain; background-repeat: no-repeat; background-position:50% 0;}
+.item-view-head{background-size:cover; padding-bottom:0; background-position:50% 0; min-height:140px}
+.item-view-head h2{position:relative; display:block; top:0; padding-top:35px; font-size:20px; width:100%; text-align: center; color:#fff; line-height: 1.5; font-weight:100}
 .item-view-head h2 strong{font-weight:700}
 .item-view-body{position:relative; max-width:100%; width:100%; margin:0 auto; background:#fff; padding:20px 20px; margin-top:0; min-height:500px; box-shadow: 0 5px 20px rgba(0,0,0,0.2)}
 
