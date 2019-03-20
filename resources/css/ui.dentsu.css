@@ -324,9 +324,10 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 .about-idea .n3 dt:before{background-position:-200px 0}
 
 .philosophy-list{width:100%; text-align:center; padding:0 25px 40px; word-break: keep-all}
-.philosophy-list dl{margin-top:40px;}
+.philosophy-list dl{position:relative;margin-top:40px;}
+.philosophy-list dl:before{content:""; display:block; position: absolute; top:-15px; left:50%; margin-left:-35px; width:70px; height:1px; background:#e5e5e5;}
 .philosophy-list dt{width:100%; font-size:18px;}
-.philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:30px; letter-spacing:1px;}
+.philosophy-list dt em{width:100%; display:inline-block; color:#ff4d53; font-size:30px; letter-spacing:1px;}
 .philosophy-list dt strong{display:inline-block;}
 .philosophy-list dt span{display:inline-block; padding:0 15px;}
 

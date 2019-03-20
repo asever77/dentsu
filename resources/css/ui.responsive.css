@@ -375,11 +375,11 @@
     .philosophy-list{width:100%; text-align:center; padding-bottom:80px;}
     .philosophy-list dl{margin-top:80px;}
     .philosophy-list dt{width:100%; font-size:30px;}
-    .philosophy-list dt em{width:100%; display:inline-block; color:#e5e5e5; font-size:60px; letter-spacing:1px;}
+    .philosophy-list dt em{width:100%; display:inline-block; font-size:60px; letter-spacing:1px;}
     .philosophy-list dt strong{display:inline-block;}
     .philosophy-list dt span{display:inline-block; padding:0 30px;}
-    .philosophy-list dt strong:before,
-    .philosophy-list dt strong:after{content:""; display:inline-block; width:100px; height:6px; background:#ff4d53; vertical-align:middle}
+    /*.philosophy-list dt strong:before,
+    .philosophy-list dt strong:after{content:""; display:inline-block; width:100px; height:6px; background:#ff4d53; vertical-align:middle}*/
     .philosophy-list dd{margin-top:20px; font-size:16px; font-weight: 200;}
     .philosophy-list dd strong{font-size:24px; font-weight: 400}
     .philosophy-list dd strong b{font-weight: 600;}
