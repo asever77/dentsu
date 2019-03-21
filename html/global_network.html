@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+	<link rel="shortcut icon" href="../resources/img/common/ico_favicon.ico"> 
+  
+	<title>Global Network | dentsu KOREA</title>
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="../resources/js/ui.base.js"></script>
+    <script src="../resources/js/lib/snap.svg.js"></script>
+    <style>
+    /* navigation buttons */
+#dbamapnavi {
+	padding-top: 20px;
+	padding-bottom: 4px;
+	overflow:auto;
+}
+#dbamapnavi a {
+	float:left;
+	margin-right:12px;/* 210 20 210 20 210 */
+	display:block;
+	background-color:#999999;
+}
+#dbamapnavi a:hover {
+	text-decoration:none;
+	background-color:#cccccc;
+}
+#dbamapnavi a#globalbuttona {
+	float:right;
+	display:none;
+	width:130px;
+	margin-right:0px;
+}
+#dbamapnavi a span {
+	font-size:16px;
+	color:white;
+	display:block;
+	padding-top:6px;
+	padding-bottom:6px;
+	text-align:center;
+}
+#americasbuttona {
+	width:150px;
+}
+#emeabuttona {
+	width:130px;
+}
+#apacbuttona {
+	width:130px;
+	margin-right:0px;
+}
+
+/* map area */
+#dbamapwrapper {
+	position:relative;
+	overflow:hidden;
+}
+#dbamaparea, #dbamapbgarea {
+	width:800px;
+	height:550px;
+	overflow:hidden;
+}
+#dbamaparea {
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+}
+#dbamapbgarea {
+	z-index:0;
+}
+#dbamaparea svg {
+	width:800px;
+	height:550px;
+	overflow:hidden;	/* for IE */
+/*	border:1px solid #000000;	*/
+}
+#dbamapbgarea img {
+	width:800px;
+	height:550px;
+	overflow:hidden;	/* for IE */
+/*	border:1px solid #000000;	*/
+}
+
+/* fuki-dashi */
+#dbahubinfo,#dbahubinfotip {
+	display:none;
+}
+#dbahubinfo {
+	position:absolute;
+	top:0; left:0;
+	background-color: #999999;
+	border:1px solid #999999;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	padding: 10px;
+}
+#dbahubinfo h4 {
+	color:black;
+	font-size:14px;
+}
+#dbahubinfo ul {
+	margin-bottom:0px;
+}
+#dbahubinfo ul li {
+	padding-left:17px;
+	color:white;
+}
+#dbahubinfo ul li a,#dbahubinfo ul li a:hover,#dbahubinfo ul li a:visited {
+	color:white;
+	text-decoration:none;
+}
+#dbahubinfotip {
+	position:absolute;
+	top:0; left:0;
+	width:30px;
+	height:30px;
+	background-image:url("../resources/img/map/tip.svg");
+	background-repeat:no-repeat;
+	background-position: center center;
+	background-size:contain;
+}
+#dbahubinfotip.upper,#dbahubinfotip.lower {
+	position:absolute;
+}
+#dbahubinfotip.left,#dbahubinfotip.right {
+	position:absolute;
+}
+#dbahubinfotip.upper {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+#dbahubinfotip.lower {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+}
+
+#dbahubinfotip.left {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+#dbahubinfotip.right {
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+#dbahubinfotip.upperleft {
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-ms-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+#dbahubinfotip.lowerleft {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+
+.cat_dentsu,.cat_dentsuone,.cat_dentsuimpact,.cat_specialistagency {
+	background-repeat:no-repeat;
+	background-position: center left;
+	background-size:14px 14px;
+}
+.cat_dentsu {
+	background-image : url('../resources/img/map/catdentsu.svg');
+}
+.cat_dentsuone {
+	background-image : url('../resources/img/map/catdentsuone.svg');
+}
+.cat_dentsuimpact {
+	background-image : url('../resources/img/map/catdentsuimpact.svg');
+}
+.cat_specialistagency {
+	background-image : url('../resources/img/map/catspecialistagency.svg');
+}
+
+#legends .cat_dentsu,#legends .cat_dentsuone,#legends .cat_dentsuimpact,#legends .cat_specialistagency {
+	background-size:11px 11px;
+}
+#legends {
+	margin-top:12px;
+	height:35px;
+}
+#legends li {
+	font-size:90%;
+	padding-left:14px;
+	display: inline-block;
+	*display: inline;  
+	*zoom: 1;
+	margin-left:10px;
+}
+#legends ul {
+	text-align:right;
+	margin-bottom:0px;
+}
+
+#dbamapinfo ul li {
+	padding-left:17px;
+}
+
+
+#dbamaparea #dbanetworks g g:hover rect {
+	fill: #ff8f8f;
+}
+
+.network-wrap{width:1000px; margin:0 auto;}
+</style>
+</head>
+
+<body>
+	<div class="base-skip" id="baseSkip"></div>
+	<div class="base-layer" id="baseLayer"></div>
+
+	<div class="base-wrap" id="baseWrap">
+		<header class="base-header" id="baseHeader"></header>
+
+		<div class="base-body" id="baseBody">
+			<main role="main" class="base-main" id="baseMain">
+				<div class="tit-wrap type-about">
+					Global Network
+				</div>
+				<div class="inner-wrap">
+					<div class="network-wrap">
+                   
+                        <div id="dbamapnavi" style="padding:60px 0 20px"> 
+                            <a href="#dbaamericasareainfo" id="americasbuttona"><span id="americasbutton">Americas</span></a>
+                            <a href="#dbaemeaareainfo" id="emeabuttona"><span id="emeabutton">EMEA</span></a>
+                            <a href="#dbaapacareainfo" id="apacbuttona"><span id="apacbutton">APAC</span></a>
+                            <a href="javascript:void(0)" class="noSmooth" id="globalbuttona" style="display: none;"><span id="globalbutton">Global</span></a>
+                        </div>
+                    
+                        <div id="dbamapwrapper" style="z-index: 0;">
+                            <div id="dbamapbgarea">
+                                <img src="../resources/img/map/dbamap-bg.svg" width="800" height="550" style="transform: translate(0px, 0px) scale(1, 1) rotate(0.1deg);">
+                            </div>
+                            <div id="dbamaparea">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 863.9 473.9" enable-background="new 0 0 863.9 473.9" xml:space="preserve" style="transform: translate(0px, 0px) scale(1, 1) rotate(0.1deg);">
+                                    <g id="dbamap">
+                                        <g id="dbanetworks">
+                                            <g id="apacarea">
+                                                <g id="makati" style="fill-opacity: 1;">
+                                                    <rect x="713.1" y="274.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="sydney" style="fill-opacity: 1;">
+                                                    <rect x="772.6999999999999" y="398.9" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="shanghai" style="fill-opacity: 1;">
+                                                    <rect x="702.3" y="220.20000000000002" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="hongkong" style="fill-opacity: 1;">
+                                                    <rect x="686" y="236.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="auckland" style="fill-opacity: 1;">
+                                                    <rect x="837.6" y="404.29999999999995" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="jakarta" style="fill-opacity: 1;">
+                                                    <rect x="675.1999999999999" y="323.09999999999997" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="taipei" style="fill-opacity: 1;">
+                                                    <rect x="707.6999999999999" y="231" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="seoul" style="fill-opacity: 1;">
+                                                    <rect x="718.5" y="198.5" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="yangon" style="fill-opacity: 1;">
+                                                            <rect x="648.1" y="263.5" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="kualalumpur" style="fill-opacity: 1;">
+                                                            <rect x="653.5" y="290.59999999999997" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="singapore" style="fill-opacity: 1;">
+                                                            <rect x="664.3" y="301.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="beijing" style="fill-opacity: 1;">
+                                                        <rect x="702.3" y="187.70000000000002" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="hochiminhcity" style="fill-opacity: 1;">
+                                                            <rect x="669.8" y="274.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="bangkok" style="fill-opacity: 1;">
+                                                            <rect x="658.9" y="268.9" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="mumbai" style="fill-opacity: 1;">
+                                                        <rect x="588.5" y="252.70000000000002" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="gurgaon" style="fill-opacity: 1;">
+                                                        <rect x="604.8" y="220.20000000000002" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="bangalore" style="fill-opacity: 1;">
+                                                        <rect x="599.4" y="263.5" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                            </g>
+                                            <g id="emeaarea">
+                                                <g id="dubai" style="fill-opacity: 1;">
+                                                        <rect x="539.8" y="236.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                            </g>
+                                            <g id="americasarea">
+                                                <g id="buenosaires" style="fill-opacity: 1;">
+                                                        <rect x="268.9" y="399" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="saopaulo" style="fill-opacity: 1;">
+                                                        <rect x="285.2" y="366.4" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="newyork" style="fill-opacity: 1;">
+                                                        <rect x="231" y="176.9" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                                <g id="toronto" style="fill-opacity: 1;">
+                                                        <rect x="209.4" y="160.6" fill="#dd0000" width="6.4" height="6.4"></rect>
+                                                </g>
+                                            </g>
+                                        </g>
+                                    </g>
+                                    <desc>Created with Snap</desc>
+                                    <defs></defs>
+                                </svg>
+                            </div>
+                                                
+                        </div>
+                        <div id="dbahubinfo"></div>
+                        <div id="dbahubinfotip"></div>
+                        <div id="legends">
+                            <ul style="display: none;">
+                                <li class="cat_dentsu">Dentsu</li>
+                                <li class="cat_dentsuone">Dentsu One</li>
+                                <li class="cat_dentsuimpact">Dentsu Impact</li>
+                                <li class="cat_specialistagency">Specialist Agency</li>
+                            </ul>
+                        </div>
+                        <div id="dbamapinfo" style="display: none;">
+                            <h3 id="dbaamericasareainfo">Americas</h3>
+                            <div id="info_buenosaires">
+                                <h4>Buenos Aires</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ARGENTINA">DENTSU ARGENTINA</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_saopaulo">
+                                <h4>Sao Paulo</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20BRAZIL">DENTSU BRAZIL</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_toronto">
+                                <h4>Toronto</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DentsuBos%20Inc.">DentsuBos</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_newyork">
+                                <h4>New York</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20AMERICA">DENTSU AMERICA</a></li>
+                                </ul>
+                            </div>
+                            
+                            <h3 id="dbaemeaareainfo">EMEA</h3>
+                            <div id="info_dubai">
+                                <h4>Dubai</h4>
+                                <ul>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Dentsu%20Middle%20East%20and%20Africa%20(MEA)">Dentsu MEA</a></li>
+                                </ul>
+                            </div>
+                            
+                            <h3 id="dbaapacareainfo">APAC</h3>
+                            <div id="info_sydney">
+                                <h4>Sydney</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=BWM%20Dentsu%20Pvt.%20Ltd.%20(Sydney)">BWM Dentsu</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_beijing">
+                                <h4>Beijing</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Beijing%20Dentsu%20Advertising%20Co.,%20Ltd.">Beijing Dentsu</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20(CHINA)">DENTSU ONE (CHINA)</a></li>
+                                    <li class="cat_specialistagency"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Dentsu%20Public%20Relations%20Consulting%20Beijing%20Co.,%20Ltd.">Dentsu Public Relations Consulting Beijing</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_shanghai">
+                                <h4>Shanghai</h4>
+                                <ul>
+                                    <li class="cat_specialistagency"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20TOP">DENTSU TOP</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_hongkong">
+                                <h4>Hong Kong</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20HONG%20KONG">DENTSU HONG KONG</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_bangalore">
+                                <h4>Bangalore</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20INDIA%20(BANGALORE)">DENTSU INDIA</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_gurgaon">
+                                <h4>Gurgaon</h4>
+                                <ul>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE">DENTSU ONE</a></li>
+                                    <li class="cat_dentsuimpact"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20IMPACT%20(GURGAON)">DENTSU IMPACT (GURGAON)</a></li>
+                                    <li class="cat_specialistagency"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Dentsu%20Webchutney%20Pvt.%20Ltd.%20(Gurgaon)">DENTSU Webchutney</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_mumbai">
+                                <h4>Mumbai</h4>
+                                <ul>
+                                    <li class="cat_specialistagency"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Taproot%20Dentsu%20India%20Communication%20Pvt.%20Ltd.">Taproot Dentsu</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_jakarta">
+                                <h4>Jakarta</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20INDONESIA">DENTSU INDONESIA</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20(JAKARTA)">DENTSU ONE (JAKARTA)</a></li>
+                                    <li class="cat_dentsuimpact"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20IMPACT%20(JAKARTA)">DENTSU IMPACT (JAKARTA)</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_seoul">
+                                <h4>Seoul</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20KOREA">DENTSU KOREA</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_kualalumpur">
+                                <h4>Kuala Lumpur</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20LHS">DENTSU LHS</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20(KUALA LUMPUR)">DENTSU ONE (KUALA LUMPUR)</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_yangon">
+                                <h4>Yangon</h4>
+                                <ul>
+                                    <li class="cat_dentsu">DENTSU MYANMAR</li>
+                                </ul>
+                            </div>
+                            <div id="info_auckland">
+                                <h4>Auckland</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=BC%26F%20Dentsu">BC&amp;F Dentsu</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_makati">
+                                <h4>Makati</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=Dentsu%20Jayme%20Syfu%20Inc.">Dentsu Jayme Syfu</a></li>
+                                    <li class="cat_dentsuone">ASPAC</li>
+                                </ul>
+                            </div>
+                            <div id="info_singapore">
+                                <h4>Singapore</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20SINGAPORE">DENTSU SINGAPORE</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_taipei">
+                                <h4>Taipei</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20TAIWAN">DENTSU TAIWAN</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20(TAIPEI)">DENTSU ONE (TAIPEI)</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_bangkok">
+                                <h4>Bangkok</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20THAILAND">DENTSU THAILAND</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20(BANGKOK)">DENTSU ONE (BANGKOK)</a></li>
+                                </ul>
+                            </div>
+                            <div id="info_hochiminhcity">
+                                <h4>Ho Chi Minh City</h4>
+                                <ul>
+                                    <li class="cat_dentsu"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20VIETNAM">DENTSU VIETNAM</a></li>
+                                    <li class="cat_dentsuone"><a href="/business/international/dentsuaegisnetwork.html?showcompanyinfo=DENTSU%20ONE%20">DENTSU ONE</a></li>
+                                    <li class="cat_specialistagency">Dentsu Compass</li>
+                                </ul>
+                            </div>
+                        
+                        </div>
+					</div>
+		
+
+				</div>
+				
+
+
+			</main>
+		</div>
+
+		<footer class="base-footer" id="baseFooter"></footer>
+	</div>
+<script>
+
+(function($) {
+	$(document).ready( function() {
+		// hide info for javascript enable environment
+		$("#dbamapinfo").hide();
+		$("#legends ul").hide();
+
+		// load mapdata
+		//$("#dbamapbgarea").append('<img src="../resources/img/map/dbamap-bg.svg" width="670" height="377" />');
+		$("#dbamaparea").load("../resources/img/map/dbamap-front.svg svg",function() {
+			dbamapsetup();
+			bindglobalevent();
+			zoomGlobal();
+		});
+
+		// buttons
+		$('#americasbutton').on('click', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			hideinfo();
+			zoomAmericas();
+			$('#globalbuttona').show(500);
+			if (!dbamap_bindevent) {
+				bindevent();
+			}
+		});
+		$('#emeabutton').on('click', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			hideinfo();
+			zoomEMEA();
+			$('#globalbuttona').show(500);
+			if (!dbamap_bindevent) {
+				bindevent();
+			}
+		});
+		$('#apacbutton').on('click', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			hideinfo();
+			zoomAPAC();
+			$('#globalbuttona').show(500);
+			if (!dbamap_bindevent) {
+				bindevent();
+			}
+		});
+		$('#globalbuttona').on('click', function(e) {
+			e.stopPropagation();
+			e.preventDefault();
+			hideinfo();
+			zoomGlobal();
+			$('#globalbuttona').hide(500);
+			$('#legends ul').hide();
+			bindglobalevent();
+		});
+		$('#globalbuttona').hide();
+
+		function bindevent() {
+			// bind event to network hubs
+			$('#dbanetworks g g').each(function() {
+				var id = $(this).attr('id');
+				$('#'+id).on('click', function(e) {
+					e.stopPropagation();
+					showinfo( id, $(this).offset().left, $(this).offset().top - $('.network-wrap').offset().top + 140 );
+				});
+			});
+			dbamap_bindevent = true;
+			$('#dbamapwrapper').on('click',function() {
+				hideinfo();
+			});
+		}
+		function bindglobalevent() {
+			// bind event to network hubs
+			$('#dbanetworks g g').each(function() {
+				var id = $(this).attr('id');
+				$('#'+id).off('click');
+			});
+			$('#dbamapwrapper').off('click');
+
+			$('#apacarea g').each(function() {
+				var id = $(this).attr('id');
+				$('#'+id).on('click',function(e) {
+					e.stopPropagation();
+					zoomAPAC();
+					$('#globalbuttona').show(500);
+					if (!dbamap_bindevent) {
+						bindevent();
+					}
+				});
+			});
+
+			$('#emeaarea g').each(function() {
+				var id = $(this).attr('id');
+				$('#'+id).on('click',function(e) {
+					e.stopPropagation();
+					zoomEMEA();
+					$('#globalbuttona').show(500);
+					if (!dbamap_bindevent) {
+						bindevent();
+					}
+				});
+			});
+
+			$('#americasarea g').each(function() {
+				var id = $(this).attr('id');
+				$('#'+id).on('click',function(e) {
+					e.stopPropagation();
+					zoomAmericas();
+					$('#globalbuttona').show(500);
+					if (!dbamap_bindevent) {
+						bindevent();
+					}
+				});
+			});
+
+			dbamap_bindevent = false;
+		}
+		function hideinfo() {
+			$('#dbahubinfo').css('display','none');
+			$('#dbahubinfotip').css('display','none');
+		}
+		function showinfo( id, x, y, z ) {	// direction : upper lower right left
+			if (dbamap_currentinfo == id) {
+				hideinfo();
+				dbamap_currentinfo = null;
+				return;
+			}
+			hideinfo();
+			dbamap_currentinfo = id;
+			var direction = getDirection( id );
+			//dbamap_currenthubsize = 3.2 * 2 * 670 / 863.9;
+			var fwidth = 30;
+			var fheight = 30;
+			var bsize = 3.2 * 2 * dbamap_currentzoom * 800 / 863.9;
+
+			var contentsId = 'info_'+id;
+			var contents = $('#'+contentsId).html();
+			$('#dbahubinfo').empty();
+			$('#dbahubinfo').append(contents);
+
+			// å¹ãå‡ºã—ã®ä½ç½®è¨ˆç®—
+			var px = 0;	//å¹ãå‡ºã—ã®å›²ã¿ã®ä½ç½®
+			var py = 0;	//å¹ãå‡ºã—ã®å›²ã¿ã®ä½ç½®
+			var ow = $('#dbahubinfo').outerWidth();
+			var oh = $('#dbahubinfo').outerHeight();
+			var fx = 0;	// å¼•ãå‡ºã—ç·šã®ä½ç½®
+			var fy = 0;	// å¼•ãå‡ºã—ç·šã®ä½ç½®
+
+			$("#dbahubinfotip").removeClass('lower');
+			$("#dbahubinfotip").removeClass('upper');
+			$("#dbahubinfotip").removeClass('right');
+			$("#dbahubinfotip").removeClass('left');
+			$("#dbahubinfotip").removeClass('upperleft');
+			$("#dbahubinfotip").removeClass('lowerleft');
+			$('#dbahubinfotip').addClass(direction);
+
+			if (direction == 'upper') {
+				px = x - ow/2 + bsize/2
+				py = y - oh - fheight+1;
+				fx = x+bsize/2-fwidth/2;
+				fy = y-fheight;
+			} else if (direction == 'lower') {
+				px = x - ow/2 + bsize/2;
+				py = y + fheight+ bsize;
+				fx = x+bsize/2-fwidth/2;
+				fy = y+bsize;
+			} else if (direction == 'right') {
+				px = x + bsize+fwidth;
+				py = y -oh/2+ bsize/2;
+				fx = x+bsize;
+				fy = y+bsize/2-fwidth/2;
+			} else if (direction == 'upperleft') {	// left 
+				px = x - ow-fwidth+fwidth/1.41;
+				py = y - oh - fheight/1.41+fheight/2;
+				fx = x-fwidth/1.41;
+				fy = y-fwidth/1.41;
+			} else if (direction == 'lowerleft') {	// left 
+				px = x - ow-fwidth+fwidth/1.41;
+				py = y + fheight/1.41-fheight/2;
+				fx = x-fwidth/1.41;
+				fy = y+bsize/2;
+			} else {	// left 
+				px = x - ow-fwidth+1;
+				py = y - oh/2 + bsize/2;
+				fx = x-fheight;
+				fy = y+bsize/2-fwidth/2;
+			}
+
+			$("#dbahubinfotip").css({'top':fy,'left':fx});
+			$('#dbahubinfo').css({'top':py,'left':px});
+
+			$('#dbahubinfo').css('display','block');
+			$('#dbahubinfotip').css('display','block');
+
+			if ( $('#legends ul').css('display') == 'none') {
+				$('#legends ul').show();
+			}
+		}
+
+		// init map and buttons
+		function dbamapsetup() {
+			dbamapfix();
+		}
+
+		// change map visual
+		function dbamapfix() {
+			// upsize hub points
+			$('#dbamaparea #dbanetworks rect').each(function() {
+				var scale = 2;
+				var r = $(this);
+				var x = r.attr("x");
+				var y = r.attr("y");
+				var w = r.attr("width");
+				var h = r.attr("height");
+				r.attr('width',w*scale);
+				r.attr('height',h*scale);
+				r.attr("x",x-w*(scale-1)/2);
+				r.attr("y",y-h*(scale-1)/2);
+			});
+		}
+		function zoomAmericas() {
+			zoomMap(268,-68,1.8);
+			lightarea('americasarea');
+			dbamap_currentzoom = 1.8;
+		}
+		function zoomEMEA() {
+			zoomMap(-359,98,2.0)
+			lightarea('emeaarea');
+			dbamap_currentzoom = 2.0;
+		}
+		function zoomAPAC() {
+			zoomMap(-443,-88,2.0)
+			lightarea('apacarea');
+			dbamap_currentzoom = 2.0;
+		}
+		function zoomGlobal() {
+			zoomMap(0,0,1);
+			lightarea('global');
+			dbamap_currentzoom = 1.0;
+		}
+
+		function zoomMap(px,py,ps) {	// ãŸã©ã‚Šç€ããŸã„x,yã¨scale
+			var sx = dbamap_status.x;
+			var sy = dbamap_status.y;
+			var ss = dbamap_status.scale;
+			$('#dbamapwrapper').animate({zIndex:1},{
+				duration:dbamap_status.dur,
+				step:function(r) {
+					dbamap_status.x = sx + (px-sx)*r;
+					dbamap_status.y = sy + (py-sy)*r;
+					dbamap_status.scale = ss + (ps-ss)*r;
+					var str = 'translate('+dbamap_status.x+'px,'+dbamap_status.y+'px) '+
+					          'scale('+dbamap_status.scale+','+dbamap_status.scale+') '+
+					          'rotate(0.1deg)';
+					$('#dbamaparea svg').css({transform:str});
+					$('#dbamapbgarea img').css({transform:str});
+				},
+				complete:function() {
+					$(this).css("zIndex","0");
+					dbamap_status.x = px;
+					dbamap_status.y = py;
+					dbamap_status.scale = ps;
+				}
+			});
+		}
+
+		function lightarea( areastr ) {
+			$('#dbanetworks g g').each(function(){
+				var pid = $(this).parent().attr('id');
+				var id = $(this).attr('id');
+				var op = 0;
+				if ((pid == areastr) || (areastr=='global')) {
+					op = 1;
+				}
+				var smap = Snap( document.getElementById(id) );
+				smap.stop().animate({ "fill-opacity":op},500,mina.easeout);
+			});
+		}
+	});
+
+	var dbamap_currentinfo = null;
+	var dbamap_currentzoom = 1.0;
+	var dbamap_bindevent = false;
+	var dbamap_status = {
+		dur:500,
+		scale: 1,
+		x: 0,
+		y: 0,
+		forcus:'global'
+	};
+	/* fukidashi direction */
+	var dbamap_tipdirections = {
+		buenosaires	:	'upperleft',
+		mumbai	:	'lower',	
+		bangalore	:	'lower',	
+		gurgaon	:	'right',
+		jakarta	:	'left',
+		jakarta	:	'left',
+		singapore	:	'left',
+		kualalumpur	:	'left',
+		makati		:	'right',
+		hongkong:	'left',
+		taipei	:	'right',
+		shanghai:	'right',
+		beijing	:	'lowerleft',
+		seoul	:	'right',
+
+		dubai	:	'upper',
+		newyork	:	'right',
+		toronto	:	'lower',
+		saopaulo	: 'left'
+	};
+	function getDirection(id) {
+		var ret = dbamap_tipdirections[id];
+		if (!ret) { ret = 'upper' }
+		return ret;
+	}
+	function log(mes) {
+		$('#debugconsole').append('<p>'+mes+'</p>');
+	}
+}) (jQuery);
+
+
+/*
+ #e85197 - Dentsu (Market)
+ #5dc5f1 - Dentsu One
+ #f9be00 - Detsu Impact
+ #9cc942 - Specialist / Local Brands
+*/
+
+// smoothã‚¹ã‚¯ãƒ­ãƒ¼ãƒ«ã®äº‹å‰å‡¦ç†ã«é˜»å®³ã•ã‚Œã¦ã‚¢ãƒ³ã‚«ãƒ¼ä»˜ãã®aã‚¿ã‚°ã¸ã®ã‚¢ãƒ‹ãƒ¡ãƒ¼ã‚·ãƒ§ãƒ³ä»˜ãã‚¤ãƒ™ãƒ³ãƒˆã®å‡¦ç†ã¯NGã®ã‚ˆã†ã ã€‚
+
+</script>
+	<script> 
+	;(function($, win, doc, undefined) {
+		$(doc).ready(function(){
+			$plugins.uiTab({ 
+				id:'tabService', 
+				current:0, 
+				label:'our service'
+			});
+
+			
+		});
+	})(jQuery, window, document);
+	</script>
+</body>
+</html>
