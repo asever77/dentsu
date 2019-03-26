@@ -132,6 +132,7 @@
 .tit-wrap.type-news{background:#353ed5; background:url(../img/content/topbg_news.jpg) repeat 50% 0; background-size:cover}
 .tit-wrap.type-contact{background:#f0991e; background:url(../img/content/topbg_contact.jpg) repeat 50% 0; background-size:cover}
 .tit-wrap.type-search{background:#232323; background:url(../img/content/topbg_search.jpg) repeat 50% 0; background-size:cover}
+.tit-wrap.type-global{background:#19bb99; background:url(../img/content/topbg_global.jpg) repeat 50% 0; background-size:cover}
 
 .ui-tab-btns{width:100%; text-align: center}
 .ui-tab-btn{display:inline-block; float:none; padding:5px 4px 5px; min-height:40px; border-left:0; font-size:16px; margin:0 10px; font-weight: 200; letter-spacing: 2px; outline:none; color:#1b1b1b;}
@@ -353,3 +354,64 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
     transition:opacity .5s ease-in-out, top .3s ease-in-out;
 }
 .fadeinup.active {opacity:1; top:0}
+
+
+.global-wrap{background:#f7f7f7; padding:80px 0}
+.tab-global{margin:0 auto;}
+.tab-global .ui-tab-btns {text-align: center}
+.tab-global button{width:170px; height:50px; background:#fff; color:#a0a0a0; font-size:16px; border:0; padding:0; margin:0 3px; font-weight:bold; letter-spacing:2px}
+.tab-global .ui-tab-btn:hover,
+.tab-global .ui-tab-btn:focus{background:#fff; color:#1cc1a1; border:0; letter-spacing:2px}
+.tab-global .ui-tab-btn.selected{background:#1cc1a1; color:#fff; border:0; letter-spacing:2px}
+
+.dentsu-type{position: relative; margin-top:45px; width:100%; text-align: center}
+.dentsu-type li{display:inline-block; margin:0 10px}
+.dentsu-type li:before{content:""; display:inline-block; width:10px; height:10px; background:#e85197; margin-right:6px;}
+.dentsu-type li.n2:before{background:#5dc5f1}
+.dentsu-type li.n3:before{background:#f9be00}
+.dentsu-type li.n4:before{background:#9cc942}
+
+.dentsu-map{width:1400px; height:750px; background:url(../img/content/map_all.png) no-repeat 50% 0}
+
+.dentsu-map .btn-base[aria-expanded="true"]{background-image:url(../img/content/map_dot_on.png)}
+.dentsu-map .btn-base{position:absolute; margin:0; outline:0; width:18px; height:18px; background:url(../img/content/map_dot.png) no-repeat 50% 50%; min-width:0; min-height:0;}
+.dentsu-map .btn-base.map-1{top:301px; left:565px}
+.dentsu-map .btn-base.map-2{top:286px; left:530px}
+.dentsu-map .btn-base.map-3{top:343px; left:546px}
+.dentsu-map .btn-base.map-4{top:357px; left:567px}
+.dentsu-map .btn-base.map-5{top:357px; left:530px}
+.dentsu-map .btn-base.map-6{top:351px; left:429px}
+.dentsu-map .btn-base.map-7{top:373px; left:412px}
+.dentsu-map .btn-base.map-8{top:388px; left:427px}
+.dentsu-map .btn-base.map-9{top:373px; left:487px}
+.dentsu-map .btn-base.map-10{top:388px; left:504px}
+.dentsu-map .btn-base.map-11{top:400px; left:521px}
+.dentsu-map .btn-base.map-12{top:392px; left:577px}
+.dentsu-map .btn-base.map-13{top:428px; left:498px}
+.dentsu-map .btn-base.map-14{top:446px; left:515px}
+.dentsu-map .btn-base.map-15{top:466px; left:546px}
+.dentsu-map .btn-base.map-16{top:558px; left:678px}
+.dentsu-map .btn-base.map-17{top:577px; left:771px}
+
+.dentsu-map .btn-base.map-emea1{top:359px; left:330px}
+
+.dentsu-map .btn-base.map-amer1{top:261px; left:1060px}
+.dentsu-map .btn-base.map-amer2{top:289px; left:1079px}
+.dentsu-map .btn-base.map-amer3{top:539px; left:1138px}
+.dentsu-map .btn-base.map-amer4{top:577px; left:1117px}
+
+
+.dentsu-map .ui-drop-pnl.tr{padding-bottom:35px; margin-left:25px}
+.dentsu-map .ui-drop-pnl.tl{padding-bottom:35px; margin-left:-25px}
+.dentsu-map .ui-drop-pnl .box{background:#000; color:#fff; padding:20px 30px 30px; min-width:300px;}
+.dentsu-map .ui-drop-pnl.tl .box:after{content:""; display:block; width:32px; height:35px; background:url(../img/content/box_arrow_l.png) no-repeat; position: absolute; bottom:0; left:0;}
+.dentsu-map .ui-drop-pnl.tr .box:after{content:""; display:block; width:32px; height:35px; background:url(../img/content/box_arrow_r.png) no-repeat; position: absolute; bottom:0; right:0;}
+.dentsu-map .ui-drop-pnl .box h1{font-size:20px; letter-spacing: 1px; margin-bottom:5px}
+.dentsu-map .ui-drop-pnl .box a{color:#fff; font-size:14px; text-decoration: none; display:block; outline:0; letter-spacing:1px; font-weight:200}
+.dentsu-map .ui-drop-pnl .box a:before{content:""; display:inline-block; width:10px; height:10px; background:#e85197; margin-right:6px;}
+.dentsu-map .ui-drop-pnl .box a.n2:before{background:#5dc5f1}
+.dentsu-map .ui-drop-pnl .box a.n3:before{background:#f9be00}
+.dentsu-map .ui-drop-pnl .box a.n4:before{background:#9cc942}
+.dentsu-map .btn-close{width:12px; height:12px; min-width:0; min-height:0; background:transparent !important; opacity:0.7; top:10px; right:10px }
+.dentsu-map .btn-close:before,
+.dentsu-map .btn-close:after{background:#fff}
