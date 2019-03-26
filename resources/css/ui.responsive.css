@@ -49,7 +49,7 @@
     .header-wrap{width:100%; max-width:1120px}
     .header-wrap .logo{left:50%; margin-left:-124px; top:48px; width:247px; height:30px; background:url(../img/common/logo.png) no-repeat 0 0; background-size:cover; transition:top 0.2s}
      
-    .base-header.on{min-height:380px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
+    .base-header.on{min-height:300px; box-shadow: 0 0 20px rgba(0,0,0,0.2)}
     .base-header.on .gnb-dep2{display:block; position:absolute;}
     .gnb-wrap .btn-close,
     .header-wrap .btn-menu{display:none}
@@ -77,8 +77,8 @@
     .base-body{margin-top:190px; transition: margin 0.4s ease-in}
     .gnb-wrap{display:block; width:100%; position: absolute; top:120px; transition:top 0.2s; right:0; padding:0; height:auto;}
 
-    .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
-    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
+    .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:10px}
+    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:15px 0; text-align: center; text-decoration: none; letter-spacing: 1px}
     .gnb-dep2 a:hover,
     .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
 
@@ -366,8 +366,8 @@
     .service-txt p br{display:none;}
     .service-tit p br{display:block;}
 
-    .about-visual{width:100%; height:500px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
-    .about-visual .inner-wrap{padding:110px 90px 0; }
+    .about-visual{width:100%; height:400px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+    .about-visual .inner-wrap{padding:70px 90px 0; }
     .about-visual .inner-wrap h2{color:#fff; font-size:60px; font-weight:500; line-height: 1.2}
     .about-wrap{padding:130px 90px}
     .about-text{position:relative; padding-left:25%; width:100%; font-size:20px; line-height:2; font-weight:200}
@@ -431,7 +431,7 @@
     .gnb-dep1 > li:nth-child(6) > a:focus{color:#f0991e}
 
     .gnb-dep2{display:none; width:100%; margin-top:10px; padding-bottom:80px}
-    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:25px 0; text-align: center; text-decoration: none; letter-spacing: 1px; padding-left:0}
+    .gnb-dep2 a{color:#1b1b1b; font-size:14px; font-weight: 200; width:100%; display:block; margin:15px 0; text-align: center; text-decoration: none; letter-spacing: 1px; padding-left:0}
     .gnb-dep2 a:hover,
     .gnb-dep2 a:focus{font-weight: 600; letter-spacing: 0}
     .base-body{margin-top:160px; transition: margin 0.4s ease-in}
@@ -690,9 +690,9 @@
     .ui-tab.type-service .ui-tab-pnls{margin-top:30px;}
     .ui-tab.type-service .ui-tab-pnl{background:#f7f7f7; font-size:20px; color:#1b1b1b; line-height:1.5; text-align: left; }
 
-    .service-tit{width:100%; height:530px; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:90px 90px 0; }
+    .service-tit{width:100%; height:440px; background:url(../img/content/bg_service1.jpg) no-repeat 0 0; background-size:cover; padding:70px 90px 0; }
     .service-tit .ui-tab-tit{font-size:60px; color:#fff; font-weight:700; letter-spacing: 1px; line-height:1.2; }
-    .service-tit p{margin-top:50px; letter-spacing: 1px; line-height:1.5; font-size:24px; color:#fff; font-weight:200;}
+    .service-tit p{margin-top:30px; letter-spacing: 1px; line-height:1.5; font-size:20px; color:#fff; font-weight:200;}
     .service-tit .ui-tab-tit:after{content:""; display:inline-block; vertical-align: baseline; margin-left:20px; width:400px; height:6px; background:#f2c200;}
     .service-ol{position:relative; top:-60px; background:#fff; width:1220px; margin:0 auto; padding:40px 50px 30px; font-size:0; box-shadow: 10px 10px 15px rgba(0,0,0,0.1)}
     .service-ol ol{vertical-align:top; display:inline-block; width:33.33%; font-size:20px; letter-spacing:1px;}
@@ -706,8 +706,8 @@
     .service-ol.fadeinup.active {opacity:1; top:-60px}
     .service-txt.fadeinup.active {opacity:1; top:0}
 
-    .about-visual{width:100%; height:480px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
-    .about-visual .inner-wrap{padding:120px 90px 0; }
+    .about-visual{width:100%; height:400px; background:url(../img/content/bg_overview.jpg) no-repeat 50% 0; background-size:cover;}
+    .about-visual .inner-wrap{padding:70px 90px 0; }
     .about-visual .inner-wrap h2{color:#fff; font-size:50px; font-weight:500; line-height: 1.2}
     .about-wrap{padding:100px 90px}
     .about-text{position:relative; padding-left:40%; width:100%; font-size:20px; line-height:2; font-weight:200}
