@@ -355,63 +355,56 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 }
 .fadeinup.active {opacity:1; top:0}
 
-
-.global-wrap{background:#f7f7f7; padding:80px 0}
+.only-pc{display:none}
+.global-wrap{background:#f7f7f7; padding:40px 0}
 .tab-global{margin:0 auto;}
 .tab-global .ui-tab-btns {text-align: center}
-.tab-global button{width:170px; height:50px; background:#fff; color:#a0a0a0; font-size:16px; border:0; padding:0; margin:0 3px; font-weight:bold; letter-spacing:2px}
+.tab-global button{width:20%; height:25px; background:#fff; color:#a0a0a0; font-size:12px; border:0; padding:0; margin:0 3px; font-weight:bold; letter-spacing:0}
 .tab-global .ui-tab-btn:hover,
-.tab-global .ui-tab-btn:focus{background:#fff; color:#1cc1a1; border:0; letter-spacing:2px}
-.tab-global .ui-tab-btn.selected{background:#1cc1a1; color:#fff; border:0; letter-spacing:2px}
+.tab-global .ui-tab-btn:focus{background:#fff; color:#1cc1a1; border:0; letter-spacing:0}
+.tab-global .ui-tab-btn.selected{background:#1cc1a1; color:#fff; border:0; letter-spacing:0}
 
-.dentsu-type{position: relative; margin-top:45px; width:100%; text-align: center}
-.dentsu-type li{display:inline-block; margin:0 10px}
-.dentsu-type li:before{content:""; display:inline-block; width:10px; height:10px; background:#e85197; margin-right:6px;}
+.dentsu-type{position: relative; margin-top:15px; width:100%; text-align: center}
+.dentsu-type li{display:inline-block; margin:0 5px; font-size:11px; color:#707070}
+.dentsu-type li:before{content:""; display:inline-block; width:5px; height:5px; background:#e85197; margin-right:6px;}
 .dentsu-type li.n2:before{background:#5dc5f1}
 .dentsu-type li.n3:before{background:#f9be00}
 .dentsu-type li.n4:before{background:#9cc942}
 
-.dentsu-map{width:1400px; height:750px; background:url(../img/content/map_all.png) no-repeat 50% 0}
 
-.dentsu-map .btn-base[aria-expanded="true"]{background-image:url(../img/content/map_dot_on.png)}
-.dentsu-map .btn-base{position:absolute; margin:0; outline:0; width:18px; height:18px; background:url(../img/content/map_dot.png) no-repeat 50% 50%; min-width:0; min-height:0;}
-.dentsu-map .btn-base.map-1{top:301px; left:565px}
-.dentsu-map .btn-base.map-2{top:286px; left:530px}
-.dentsu-map .btn-base.map-3{top:343px; left:546px}
-.dentsu-map .btn-base.map-4{top:357px; left:567px}
-.dentsu-map .btn-base.map-5{top:357px; left:530px}
-.dentsu-map .btn-base.map-6{top:351px; left:429px}
-.dentsu-map .btn-base.map-7{top:373px; left:412px}
-.dentsu-map .btn-base.map-8{top:388px; left:427px}
-.dentsu-map .btn-base.map-9{top:373px; left:487px}
-.dentsu-map .btn-base.map-10{top:388px; left:504px}
-.dentsu-map .btn-base.map-11{top:400px; left:521px}
-.dentsu-map .btn-base.map-12{top:392px; left:577px}
-.dentsu-map .btn-base.map-13{top:428px; left:498px}
-.dentsu-map .btn-base.map-14{top:446px; left:515px}
-.dentsu-map .btn-base.map-15{top:466px; left:546px}
-.dentsu-map .btn-base.map-16{top:558px; left:678px}
-.dentsu-map .btn-base.map-17{top:577px; left:771px}
+.map-img{width:100%; margin-top:13px;}
+.map-img img{width:100%;}
 
-.dentsu-map .btn-base.map-emea1{top:359px; left:330px}
+.map-zone{padding:15px; width:100%;}
+.map-zone table{width:100%; table-layout: fixed}
+.map-zone td{padding-bottom:10px; vertical-align: top}
+.map-zone strong{position:relative; display:block; padding-left:19px; font-size:14px; font-weight:700; letter-spacing:0; margin-bottom:5px}
+.map-zone strong span{color:#fff; width:16px; height:16px; display:block; position:absolute; background:#1cc1a1; font-size:10px; font-weight:500; text-align: center; top:4px; left:0; border-radius:50%; line-height:16px}
+.map-zone a{color:#1b1b1b; font-size:12px; text-decoration: none; display:block; outline:0; letter-spacing:1px; font-weight:200; width:100%;padding-left:19px; margin-bottom:3px}
+.map-zone a:before{content:""; display:inline-block; width:10px; height:10px; background:#e85197; margin-right:6px;}
+.map-zone a.n2:before{background:#5dc5f1}
+.map-zone a.n3:before{background:#f9be00}
+.map-zone a.n4:before{background:#9cc942}
 
-.dentsu-map .btn-base.map-amer1{top:261px; left:1060px}
-.dentsu-map .btn-base.map-amer2{top:289px; left:1079px}
-.dentsu-map .btn-base.map-amer3{top:539px; left:1138px}
-.dentsu-map .btn-base.map-amer4{top:577px; left:1117px}
+.global-about{width:100%; position:relative; text-align:center; border-top:1px solid #e5e5e5; }
+.global-about .tit{display:inline-block; z-index:1; position:relative; top:0;font-size:18px; font-weight:700; letter-spacing: 1px; padding:20px 10px 10px;}
+.global-about .txt-kr{font-size:14px; font-weight:200; margin-top:10px; padding:0 15px}
+.global-about .txt-en{font-size:14px; font-weight:200; margin-top:20px; padding:0 15px}
 
+.global-list{margin-top:50px; padding:0 15px; overflow: hidden;}
+.global-list li{float:left; margin:0 0 10px; width:100%; height:auto; }
+.global-list-logo{float:left; padding:5px; background:#fff; margin:0 10px 0 0; width:auto; overflow:hidden}
+.global-list-logo img{display:block; margin:0; padding:0; float:left; width:70px; height:70px}
+.global-list li strong{display:block; width:100%; text-align: left; font-size:14px; font-weight:600; margin-top:5px; line-height:1.4; letter-spacing:0.05em}
+.global-list li strong br{display:none}
+.global-list li p{text-align:left;font-size:12px; margin-top:6px; line-height:1.3; font-weight:200; letter-spacing:1px}
 
-.dentsu-map .ui-drop-pnl.tr{padding-bottom:35px; margin-left:25px}
-.dentsu-map .ui-drop-pnl.tl{padding-bottom:35px; margin-left:-25px}
-.dentsu-map .ui-drop-pnl .box{background:#000; color:#fff; padding:20px 30px 30px; min-width:300px;}
-.dentsu-map .ui-drop-pnl.tl .box:after{content:""; display:block; width:32px; height:35px; background:url(../img/content/box_arrow_l.png) no-repeat; position: absolute; bottom:0; left:0;}
-.dentsu-map .ui-drop-pnl.tr .box:after{content:""; display:block; width:32px; height:35px; background:url(../img/content/box_arrow_r.png) no-repeat; position: absolute; bottom:0; right:0;}
-.dentsu-map .ui-drop-pnl .box h1{font-size:20px; letter-spacing: 1px; margin-bottom:5px}
-.dentsu-map .ui-drop-pnl .box a{color:#fff; font-size:14px; text-decoration: none; display:block; outline:0; letter-spacing:1px; font-weight:200}
-.dentsu-map .ui-drop-pnl .box a:before{content:""; display:inline-block; width:10px; height:10px; background:#e85197; margin-right:6px;}
-.dentsu-map .ui-drop-pnl .box a.n2:before{background:#5dc5f1}
-.dentsu-map .ui-drop-pnl .box a.n3:before{background:#f9be00}
-.dentsu-map .ui-drop-pnl .box a.n4:before{background:#9cc942}
-.dentsu-map .btn-close{width:12px; height:12px; min-width:0; min-height:0; background:transparent !important; opacity:0.7; top:10px; right:10px }
-.dentsu-map .btn-close:before,
-.dentsu-map .btn-close:after{background:#fff}
+.global-info{position:relative; width:100%; border-top:2px solid #1b1b1b; margin-top:30px; padding:0 15px}
+.global-info dl{width:100%;}
+.global-info dt.first{margin-top:0; border-top:0;}
+.global-info dt{width:100%; margin-top:20px; padding-top:20px; font-size:18px; font-weight:700; letter-spacing: 1px; border-top:1px solid #e5e5e5; line-height:1.3}
+.global-info dd{width:100%; font-size:14px; line-height:1.4; font-weight:200; letter-spacing: 1px; margin-top:10px;}
+
+.global-info dd dl{padding-left:10px;}
+.global-info dd dl dt{margin-top:15px; padding-top:0; border-top:0; font-size:16px}
+.link-new{width:7px; height:7px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0; background-size:cover;} 
