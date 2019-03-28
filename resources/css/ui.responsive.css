@@ -889,7 +889,7 @@
     .global-about .tit{display:inline-block; z-index:1; position:relative; top:-45px;font-size:30px; font-weight:700; letter-spacing: 1px; padding:20px 40px; background:#f7f7f7}
     .global-about .txt-kr{font-size:18px; font-weight:200; margin-top:-20px}
     .global-about .txt-en{font-size:16px; font-weight:200; margin-top:40px}
-    .global-list{margin-top:90px; overflow: hidden; width:1400px}
+    .global-list{margin-top:90px;padding:0; overflow: hidden; width:1400px}
     .global-list li{float:left; margin-left:173px; width:220px; height:410px;}
     .global-list-logo{padding:40px; background:#fff; margin:0; width:220px; overflow:hidden}
     .global-list-logo img{display:block; margin:0; padding:0; float:left}
@@ -905,6 +905,8 @@
     .global-info dd dl{padding-left:30px;}
     .global-info dd dl dt{margin-top:30px; padding-top:0; border-top:0; font-size:18px}
     .link-new{width:13px; height:13px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0;}
+
+    .only-m{display:none}
 }
 
 /* width:320 */
