@@ -773,6 +773,7 @@
 		</div>
 
 		<footer class="base-footer" id="baseFooter"></footer>
+		<button type="button" class="btn-top">TOP</button>
 	</div>
 
 	<script> 
@@ -837,7 +838,9 @@
 				}
 			});
 
-		
+            $('.btn-top').click(function(){
+                $('html, body').animate({scrollTop : 0},300);
+            });
 			
 		});
 	})(jQuery, window, document);

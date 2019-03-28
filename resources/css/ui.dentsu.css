@@ -407,4 +407,7 @@ a:hover .list-item-info strong i{padding-bottom:1px; border-bottom:1px solid #6b
 
 .global-info dd dl{padding-left:10px;}
 .global-info dd dl dt{margin-top:15px; padding-top:0; border-top:0; font-size:16px}
-.link-new{width:7px; height:7px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0; background-size:cover;} 
+.link-new{width:7px; height:7px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0; background-size:cover}
+
+.btn-top {position:fixed;bottom:0;right:0;height:30px;width:30px;background-color:rgba(255,255,255,.5);border:1px solid #e5e5e5;font-size:0;text-align:center;outline:none}
+.btn-top:before {content:'';display:inline-block;vertical-align:middle;width:16px;height:8px;background:url('../img/common/ico_top.png') no-repeat 0 0;background-size:16px 8px}
