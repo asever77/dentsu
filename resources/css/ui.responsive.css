@@ -477,6 +477,7 @@
     .global-info dd dl dt{margin-top:30px; padding-top:0; border-top:0; font-size:18px}
     .link-new{width:13px; height:13px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0;}
 
+    .only-pc {display:none}
 }
 
 
