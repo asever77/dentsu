@@ -737,8 +737,9 @@
 
     .base-main.type-client{background:#f7f7f7}
     .inner-wrap.type-client{overflow:hidden;}
-    .list-client{width:1475px; font-size:0; position:relative; left:-37px; margin-top:100px;}
-    .list-client li{display:inline-block; width:18%; margin:0 1% 2%;}
+    .list-client{font-size:0; position:relative;margin:100px -10px 0}
+    .list-client:after {content:'';display:block;clear:both}
+    .list-client li{display:block;float:left;width:20%;margin:0 0 2%;padding:0 10px}
 
     .contact-info{width:100%; overflow:hidden; margin-top:100px}
     .contact-info dl{float:left; width:50%;}
