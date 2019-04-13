@@ -478,6 +478,19 @@
     .link-new{width:13px; height:13px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0;}
 
     .only-pc {display:none}
+
+    /* ceo */
+    .ceo-wrap{overflow:hidden; padding:100px 90px 150px;}
+    .ceo-bg{float:left; width:35%;}
+    .ceo-bg img{width:100%;}
+    .ceo-message{float:right; width:60%}
+    .ceo-message strong{display:block; font-size:30px; font-weight:500; line-height:1.3}
+    .ceo-message p{margin-top:40px; font-size:18px; line-height:1.8; font-weight:200}
+    .ceo-message .br-1{display:none}
+    .ceo-message .ceo-dentsu{font-size:16px; font-weight:200; padding-top:25px; position:relative; margin-top:60px}
+    .ceo-dentsu:before{content:""; position:absolute; top:0; left:0; display:block; width:150px; height:6px; background:#ff4d53}
+    .ceo-dentsu span{font-size:13px; }
+    .ceo-dentsu em{display:block; font-size:18px;font-weight:400; line-height:1.1}
 }
 
 
@@ -909,6 +922,17 @@
     .link-new{width:13px; height:13px; display:inline-block; background:url(../img/content/btn_newpop.png) no-repeat 0 0;}
 
     .only-m{display:none}
+
+    /* ceo */
+    .ceo-wrap{overflow:hidden; padding:100px 90px 150px;}
+    .ceo-bg{float:left; width:450px; }
+    .ceo-message{float:right; width:670px}
+    .ceo-message strong{display:block; font-size:40px; font-weight:500; line-height:1.3}
+    .ceo-message p{margin-top:60px; font-size:20px; line-height:2; font-weight:200}
+    .ceo-message .ceo-dentsu{font-size:16px; font-weight:200; padding-top:45px; position:relative; margin-top:80px}
+    .ceo-dentsu:before{content:""; position:absolute; top:0; left:0; display:block; width:150px; height:6px; background:#ff4d53}
+    .ceo-dentsu span{font-size:16px; }
+    .ceo-dentsu em{display:block; font-size:20px;font-weight:400; line-height:1.1}
 }
 
 /* width:320 */
