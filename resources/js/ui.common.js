@@ -81,7 +81,7 @@
                 $('.gnb-dep1 > li').removeClass('selected');
                 $(this).closest('li').addClass('selected');
             });
-            $('.gnb-wrap').on('mouseleave blur', function(){
+            $('.base-header').on('mouseleave blur', function(){
                 clearTimeout(timer);
                 menuHide();
             });
